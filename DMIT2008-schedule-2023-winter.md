@@ -28,19 +28,19 @@
 
 |Week|Day1|Day2|Assessments Due|
 |:-:|:-:|:-:|:-:|
-|1|Environment-Setup & JavaScript Review|Environment-Setup & JavaScript Review|
-|2|JavaScript Review|JavaScript Review|
-|3|Next-React Intro|Next-React Intro|
-|4|UI-Styling|UI-Styling|A1|
-|5|React Event & State Fundamentals|React Event & State Fundamentals|Q1|
-|6|||A2|
-Reading Break
-|7|REST API and Stateful Applications|REST API and Stateful Applications|
-|8|React Component Lifecycle|React Component Lifecycle|A3|
-|9|||
-|10|React Pages||A4a|
-|11|||
-|12|||A4b|
-|13|Deployment|Frontend Framework Features|
-|14|Testing|Testing|Theory Assessment|
-|15|||A5|
+|1-Jan9|Environment-Setup & JavaScript Review|Environment-Setup & JavaScript Review|
+|2-Jan16|JavaScript Review|JavaScript Review|
+|3-Jan23|Next-React Intro|Next-React Intro|
+|4-Jan30|UI-Styling|UI-Styling|A1|
+|5-Feb6|React Event & State Fundamentals|React Event & State Fundamentals|Q1|
+|6-Feb13|||A2|
+|Break-Feb20||||
+|7-Feb27|REST API and Stateful Applications|REST API and Stateful Applications|
+|8-Mar6|React Component Lifecycle|React Component Lifecycle|A3|
+|9-Mar13|||
+|10-Mar20|React Pages||A4a|
+|11-Mar27|||
+|12-Apr3|||A4b|
+|13-Apr10|Deployment|Frontend Framework Features|
+|14-Apr17|Testing|Testing|Theory Assessment|
+|15-Apr24|||A5|
