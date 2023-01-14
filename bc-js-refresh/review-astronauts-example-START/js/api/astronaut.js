@@ -1,3 +1,3 @@
-const BASE_URL = "https://lldev.thespacedevs.com/2.2.0"
+const COMPLETE_URL = "https://lldev.thespacedevs.com/2.2.0/astronaut/";
 
-// api functions here.
+// api function here.

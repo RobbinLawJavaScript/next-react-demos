@@ -506,34 +506,41 @@ function hmrAcceptRun(bundle, id) {
 var _bootstrapMinCss = require("bootstrap/dist/css/bootstrap.min.css");
 var _astronautJs = require("./api/astronaut.js");
 var _astronautJs1 = require("./dom/astronaut.js");
-let astronautListElem = document.querySelector(".astronaut-list");
-(0, _astronautJs.getAstronautList)().then((data)=>{
-    console.log(data);
-    data.results.map((astronautData)=>{
-        (0, _astronautJs1.renderAstronautListItem)(astronautData, astronautListElem);
-    });
-});
+let astronautListElement = document.querySelector(".astronaut-list");
+const runApp = async ()=>{
+    try {
+        let data = await (0, _astronautJs.getAstronautList)();
+        console.log(`All data =`);
+        console.log(data);
+        data.results.map((astronautData)=>{
+            console.log(`astronautData = `);
+            console.log(astronautData);
+            (0, _astronautJs1.renderAstronautListItem)(astronautData, astronautListElement);
+        });
+    } catch (error) {
+        console.error(error);
+    }
+};
+runApp();
 
 },{"./api/astronaut.js":"j9BdQ","./dom/astronaut.js":"a988T","bootstrap/dist/css/bootstrap.min.css":"i5LP7"}],"j9BdQ":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "getAstronautList", ()=>getAstronautList);
-const BASE_URL = "https://lldev.thespacedevs.com/2.2.0";
-const getAstronautList1 = ()=>{
-    return fetch(`${BASE_URL}/astronaut/`).then((response)=>{
-        return response.json();
-    }).then((data)=>{
-        return data;
-    });
-};
+const COMPLETE_URL = "https://lldev.thespacedevs.com/2.2.0/astronaut/";
+//const COMPLETE_URL = "https://badurl.com";
+//const COMPLETE_URL = "https://lldev.thespacedevs.com/2.2.0/badendpoint/";
 const getAstronautList = async ()=>{
+    console.log("BEGIN getAstronautList");
     // fetch() returns a promise to res.
     // The await keyword "stalls" the JS assignment
     // until the data or error is returned (promise resolves or is rejected). 
-    const res = await fetch(`${BASE_URL}/astronaut/`);
-    if (!res.ok) throw new Error("OPPS");
+    const res = await fetch(COMPLETE_URL);
+    console.log(res);
+    if (!res.ok) throw new Error(`Bad status = ${res.status}`);
     // res.json() also returns a promise to data.
     const data = await res.json();
+    console.log("END getAstronautList");
     return data;
 };
 

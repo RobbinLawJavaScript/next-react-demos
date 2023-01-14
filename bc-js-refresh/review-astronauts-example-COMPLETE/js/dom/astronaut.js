@@ -12,6 +12,7 @@ replace the instances that have "THIS FORMAT HERE" with the astronautData.
 	<p class="mb-1">ASTRONAUT BIO HERE </p>
 </li>
 */
+
 const renderAstronautListItem = (astronautData, listElement) => {
 	let element =  
 	` 
