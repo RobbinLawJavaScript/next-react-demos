@@ -507,6 +507,7 @@ var _bootstrapMinCss = require("bootstrap/dist/css/bootstrap.min.css");
 var _astronautJs = require("./api/astronaut.js");
 var _astronautJs1 = require("./dom/astronaut.js");
 let astronautListElement = document.querySelector(".astronaut-list");
+//runApp();
 const runApp = async ()=>{
     try {
         let data = await (0, _astronautJs.getAstronautList)();
@@ -523,7 +524,7 @@ const runApp = async ()=>{
 };
 runApp();
 
-},{"./api/astronaut.js":"j9BdQ","./dom/astronaut.js":"a988T","bootstrap/dist/css/bootstrap.min.css":"i5LP7"}],"j9BdQ":[function(require,module,exports) {
+},{"bootstrap/dist/css/bootstrap.min.css":"i5LP7","./api/astronaut.js":"j9BdQ","./dom/astronaut.js":"a988T"}],"i5LP7":[function() {},{}],"j9BdQ":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "getAstronautList", ()=>getAstronautList);
@@ -606,6 +607,6 @@ replace the instances that have "THIS FORMAT HERE" with the astronautData.
     listElement.innerHTML += element;
 };
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"i5LP7":[function() {},{}]},["4lTDk","1Z4Rq"], "1Z4Rq", "parcelRequire6e04")
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["4lTDk","1Z4Rq"], "1Z4Rq", "parcelRequire6e04")
 
 //# sourceMappingURL=index.5d9dacde.js.map
