@@ -26,7 +26,7 @@
 145C:\DMIT2008\repos\next-react-demos\bc-js-refresh\review-astronauts-example-COMPLETE\node_modules\@popperjs\core\lib\utils\expandToHashMap.js.flow133181076568416156 0
 128C:\DMIT2008\repos\next-react-demos\bc-js-refresh\review-astronauts-example-COMPLETE\node_modules\caniuse-lite\data\regions\JE.js133113802777109209 0
 139C:\DMIT2008\repos\next-react-demos\bc-js-refresh\review-astronauts-example-COMPLETE\node_modules\terser\node_modules\commander\CHANGELOG.md133113802721196190 0
-88C:\DMIT2008\repos\next-react-demos\bc-js-refresh\review-astronauts-example-COMPLETE\dist133183653727756611 1
+88C:\DMIT2008\repos\next-react-demos\bc-js-refresh\review-astronauts-example-COMPLETE\dist133183676870196664 1
 115C:\DMIT2008\repos\next-react-demos\bc-js-refresh\review-astronauts-example-COMPLETE\node_modules\get-port\readme.md133113802722361540 0
 136C:\DMIT2008\repos\next-react-demos\bc-js-refresh\review-astronauts-example-COMPLETE\node_modules\@parcel\packager-css\src\CSSPackager.js133113802733218359 0
 181C:\DMIT2008\repos\next-react-demos\bc-js-refresh\review-astronauts-example-COMPLETE\node_modules\@parcel\node-resolver-core\test\fixture\node_modules\package-browser-exclude\main.js133113802756317031 0
@@ -272,7 +272,7 @@
 105C:\DMIT2008\repos\next-react-demos\bc-js-refresh\review-astronauts-example-COMPLETE\node_modules\error-ex133176989626136990 1
 117C:\DMIT2008\repos\next-react-demos\bc-js-refresh\review-astronauts-example-COMPLETE\node_modules\msgpackr\SECURITY.md133113802744007234 0
 150C:\DMIT2008\repos\next-react-demos\bc-js-refresh\review-astronauts-example-COMPLETE\node_modules\posthtml\node_modules\posthtml-parser\dist\index.d.ts133113802726299426 0
-103C:\DMIT2008\repos\next-react-demos\bc-js-refresh\review-astronauts-example-COMPLETE\js\api\astronaut.js133181804047545886 0
+103C:\DMIT2008\repos\next-react-demos\bc-js-refresh\review-astronauts-example-COMPLETE\js\api\astronaut.js133183676868676656 0
 117C:\DMIT2008\repos\next-react-demos\bc-js-refresh\review-astronauts-example-COMPLETE\node_modules\escape-string-regexp133176989626402215 1
 129C:\DMIT2008\repos\next-react-demos\bc-js-refresh\review-astronauts-example-COMPLETE\node_modules\react-error-overlay\lib\index.js133113802726330881 0
 103C:\DMIT2008\repos\next-react-demos\bc-js-refresh\review-astronauts-example-COMPLETE\node_modules\semver133176989640454084 1
@@ -3929,7 +3929,7 @@
 135C:\DMIT2008\repos\next-react-demos\bc-js-refresh\review-astronauts-example-COMPLETE\node_modules\@popperjs\core\dist\esm\popper-lite.js133181076562519544 0
 130C:\DMIT2008\repos\next-react-demos\bc-js-refresh\review-astronauts-example-COMPLETE\node_modules\@popperjs\core\dist\esm\popper.js133181076562549560 0
 129C:\DMIT2008\repos\next-react-demos\bc-js-refresh\review-astronauts-example-COMPLETE\node_modules\@popperjs\core\dist\esm\types.js133181076562559543 0
-95C:\DMIT2008\repos\next-react-demos\bc-js-refresh\review-astronauts-example-COMPLETE\js\index.js133183653726406113 0
+95C:\DMIT2008\repos\next-react-demos\bc-js-refresh\review-astronauts-example-COMPLETE\js\index.js133183655636907313 0
 141C:\DMIT2008\repos\next-react-demos\bc-js-refresh\review-astronauts-example-COMPLETE\node_modules\@parcel\watcher\src\macos\FSEventsBackend.hh133113802743059215 0
 126C:\DMIT2008\repos\next-react-demos\bc-js-refresh\review-astronauts-example-COMPLETE\node_modules\@popperjs\core\dist\esm\utils133181076571616101 1
 138C:\DMIT2008\repos\next-react-demos\bc-js-refresh\review-astronauts-example-COMPLETE\node_modules\@popperjs\core\dist\esm\utils\debounce.js133181076571206095 0
@@ -4333,7 +4333,7 @@
 184C:\DMIT2008\repos\next-react-demos\bc-js-refresh\review-astronauts-example-COMPLETE\node_modules\@parcel\node-resolver-core\test\fixture\node_modules\package-browser-alias\package.json133113802761839515 0
 204C:\DMIT2008\repos\next-react-demos\bc-js-refresh\review-astronauts-example-COMPLETE\node_modules\@parcel\node-resolver-core\test\fixture\node_modules\package-browser-alias\subfolder1\subfolder2\subfile.js133113802760088822 0
 173C:\DMIT2008\repos\next-react-demos\bc-js-refresh\review-astronauts-example-COMPLETE\node_modules\@parcel\node-resolver-core\test\fixture\node_modules\package-browser\main.js133113802756396839 0
-106C:\DMIT2008\repos\next-react-demos\bc-js-refresh\review-astronauts-example-COMPLETE\dist\index.5d9dacde.js133183653727699009 0
+106C:\DMIT2008\repos\next-react-demos\bc-js-refresh\review-astronauts-example-COMPLETE\dist\index.5d9dacde.js133183676870066726 0
 178C:\DMIT2008\repos\next-react-demos\bc-js-refresh\review-astronauts-example-COMPLETE\node_modules\@parcel\node-resolver-core\test\fixture\node_modules\package-browser\package.json133113802761999091 0
 184C:\DMIT2008\repos\next-react-demos\bc-js-refresh\review-astronauts-example-COMPLETE\node_modules\@parcel\node-resolver-core\test\fixture\node_modules\package-alias-exclude\package.json133113802761531487 0
 170C:\DMIT2008\repos\next-react-demos\bc-js-refresh\review-astronauts-example-COMPLETE\node_modules\@parcel\node-resolver-core\test\fixture\node_modules\package-alias\bar.js133113802739419622 0
@@ -4687,10 +4687,10 @@
 112C:\DMIT2008\repos\next-react-demos\bc-js-refresh\review-astronauts-example-COMPLETE\node_modules\.bin\terser.cmd133113802824669053 0
 90C:\DMIT2008\repos\next-react-demos\bc-js-refresh\review-astronauts-example-COMPLETE\js\api133176989554741122 1
 90C:\DMIT2008\repos\next-react-demos\bc-js-refresh\review-astronauts-example-COMPLETE\js\dom133176989554897356 1
-103C:\DMIT2008\repos\next-react-demos\bc-js-refresh\review-astronauts-example-COMPLETE\js\dom\astronaut.js133181798486882488 0
-110C:\DMIT2008\repos\next-react-demos\bc-js-refresh\review-astronauts-example-COMPLETE\dist\index.5d9dacde.js.map133183653727726603 0
-107C:\DMIT2008\repos\next-react-demos\bc-js-refresh\review-astronauts-example-COMPLETE\dist\index.ab0485ab.css133183651199897742 0
-111C:\DMIT2008\repos\next-react-demos\bc-js-refresh\review-astronauts-example-COMPLETE\dist\index.ab0485ab.css.map133183651199947403 0
-99C:\DMIT2008\repos\next-react-demos\bc-js-refresh\review-astronauts-example-COMPLETE\dist\index.html133183651200218601 0
+103C:\DMIT2008\repos\next-react-demos\bc-js-refresh\review-astronauts-example-COMPLETE\js\dom\astronaut.js133183672539410726 0
+110C:\DMIT2008\repos\next-react-demos\bc-js-refresh\review-astronauts-example-COMPLETE\dist\index.5d9dacde.js.map133183676870126805 0
+107C:\DMIT2008\repos\next-react-demos\bc-js-refresh\review-astronauts-example-COMPLETE\dist\index.ab0485ab.css133183655367303563 0
+111C:\DMIT2008\repos\next-react-demos\bc-js-refresh\review-astronauts-example-COMPLETE\dist\index.ab0485ab.css.map133183655367363574 0
+99C:\DMIT2008\repos\next-react-demos\bc-js-refresh\review-astronauts-example-COMPLETE\dist\index.html133183655367762961 0
 135C:\DMIT2008\repos\next-react-demos\bc-js-refresh\review-astronauts-example-COMPLETE\dist\review-astronauts-example-COMPLETE.3464ddca.js133183650506182031 0
 139C:\DMIT2008\repos\next-react-demos\bc-js-refresh\review-astronauts-example-COMPLETE\dist\review-astronauts-example-COMPLETE.3464ddca.js.map133183650506211485 0
