@@ -10,7 +10,7 @@
 
 ### Assignments
 
-| Assignment | Submission via | Due 11:59 PM Friday | Mark Distribution |
+| Assessment | Submit via | Due 11:59 PM Friday | Mark |
 |---|---|---|---|
 | Assignment 1 | github | week 4  | 20% |
 | Review Quiz | Moodle | week 5  | 10% |
