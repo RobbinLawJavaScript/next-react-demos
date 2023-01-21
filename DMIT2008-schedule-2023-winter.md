@@ -10,17 +10,18 @@
 
 ### Assignments
 
-| Assessment | Submit via | Due 11:59 PM Friday | Mark |
+| Assessment | Submit via | Due 11:59 PM Friday | Mark %|
 |---|---|---|---|
-| Assignment 1 | github | week 4  | 20% |
-| Review Quiz | Moodle | week 5  | 10% |
-| Assignment 2 | github | week 6  | 15% |
-| Assignment 3 | github | week 8  | 10% |
-| Assignment 4a| github | week 10  | 10% |
-| Assignment 4b| github | week 12  | 10% |
-| Assignment 5 | github | week 15  | 5% |
-| Theory Assessment | github | week 14  | 12% |
-| Support Forum | Moodle | week 15  | 8% |
+| Assignment 1 | github | week 4  | 20 |
+| Review Quiz | Moodle | week 5  | 10 |
+| Assignment 2 | github | week 6  | 15 |
+| Assignment 3 | github | week 8  | 10 |
+| Assignment 4a| github | week 10  | 10 |
+| Assignment 4b| github | week 12  | 10 |
+| Assignment 5 | github | week 15  | 5 |
+| Theory Assessment | github | week 14  | 12 |
+| Support Forum | Moodle | week 15  | 8 |
+|Total|||100|
 
 ---
 
