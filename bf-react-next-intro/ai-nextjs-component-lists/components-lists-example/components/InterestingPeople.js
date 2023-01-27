@@ -2,7 +2,8 @@ import { people } from '../aa-data/Data.js';
 import GetImageUrl from '../aa-utils/GetImageUrl.js';
 
 export default function InterestingPeople() {
-  const listItems = people.map(person =>
+  const listItems = people.map(person => {
+    return (
     <li key={person.id}>
       <img
         src={GetImageUrl(person)}
@@ -14,6 +15,7 @@ export default function InterestingPeople() {
           known for {person.accomplishment}
       </p>
     </li>
+    )}
   );
   return <ul>{listItems}</ul>;
 }

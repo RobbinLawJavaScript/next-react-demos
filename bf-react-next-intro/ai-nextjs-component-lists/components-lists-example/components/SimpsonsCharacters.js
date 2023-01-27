@@ -10,12 +10,35 @@ const SIMPSON_CHARACTERS = [
   {id: 9, name: "Ned Flanders"},
 ];
 
-export default function SimpsonsCharacters() {
+export function SimpsonsCharactersMapNotInsideJsx() {
+  const listItems = SIMPSON_CHARACTERS.map((character) => {
+    return (
+    <li key={character.id}>
+      {character.name}
+    </li>
+    )}
+  );
   return (
-  <ul>
-    {SIMPSON_CHARACTERS.map((character)=> {
-      return <li key={character.id}>{character.name}</li>
-    })}
-  </ul>
+  <div>
+    <h2>SimpsonsCharactersMapNotInsideJsx</h2>
+    <ul>{listItems}</ul>
+  </div>
+  )
+}
+
+export function SimpsonsCharactersMapInsideJsx() {
+  return (
+  <div>
+    <h2>SimpsonsCharactersMapInsideJsx</h2>
+    <ul>
+      {SIMPSON_CHARACTERS.map((character)=> {
+        return (
+        <li key={character.id}>
+          {character.name}
+        </li>
+        );
+      })}
+    </ul>
+  </div>
   );
 }
