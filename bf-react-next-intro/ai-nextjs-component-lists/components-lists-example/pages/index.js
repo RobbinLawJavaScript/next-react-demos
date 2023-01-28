@@ -2,8 +2,8 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 
-import {SimpsonsCharactersMapNotInsideJsx} from '../components/SimpsonsCharacters'
-import {SimpsonsCharactersMapInsideJsx} from '../components/SimpsonsCharacters'
+import {SimpsonsJsxInsideMap} from '../components/SimpsonsCharacters'
+import {SimpsonsMapInsideJsx} from '../components/SimpsonsCharacters'
 import Blog from '../components/Blog'
 import {somePosts} from '../aa-data/Data'
 import InterestingPeople from '../components/InterestingPeople'
@@ -21,8 +21,8 @@ export default function Home() {
         <h1>
           The Component lists example.
         </h1>
-        <SimpsonsCharactersMapNotInsideJsx />
-        <SimpsonsCharactersMapInsideJsx />
+        <SimpsonsJsxInsideMap />
+        <SimpsonsMapInsideJsx />
         <Blog posts={somePosts} />
         <InterestingPeople />
       </main>
