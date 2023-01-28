@@ -3,8 +3,11 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 
 // our custom components
-import Hello from '../components/Hello'
-import NewConcept from '../components/NewConcept'
+import {Hello1} from '../components/Hello'
+import {Hello2} from '../components/Hello'
+import {Hello3} from '../components/Hello'
+import {NewConcept1} from '../components/NewConcept'
+import {NewConcept2} from '../components/NewConcept'
 import ComponentWrapper from '../components/ComponentWrapper'
 
 export default function Home() {
@@ -20,11 +23,15 @@ export default function Home() {
         <h1 >
           Fundamentals Components Example
         </h1>
+        <Hello1 />
+        <Hello2 />
+        <Hello3 />
+        <NewConcept1 concept={"how to import components"} textColor={"green"} />
+        <NewConcept2 concept={"how to use props in a component"} textColor={"purple"} />
         <ComponentWrapper textColor={"blue"}>
-          <Hello />
-          <NewConcept concept={"how to import components"} />
-          <NewConcept concept={"how to use props in a component"} />
-          <NewConcept concept={"how to import components"} />
+          <h4>Just a random h4</h4>
+          <Hello1 />
+          <NewConcept1 concept={"how to have fun"} textColor={"red"} />
         </ComponentWrapper>
       </main>
 
