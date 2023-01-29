@@ -1,1 +1,3 @@
-This is an example using the `style` property on elements which is given to us by React. Although we won't use this much in the course it is a way (not the only/best way). If you want to [read more about style read here](https://reactjs.org/docs/dom-elements.html#style)
+# React Component Basics
+
+[Basic styling by reactjs.org](https://reactjs.org/docs/dom-elements.html#style)

@@ -1,16 +1,16 @@
-# React Components Intro
+# Steps to Create a Next/React Project
 
-# Steps
 - See if `create-next-app` is on this machine.
   - Start a terminal session and on the command line type:
   - `create-next-app --version`
-- Install `create-next-app` globally, but only if it is not on this machine.
+  - If a version comes back it is installed already, no need to do next step.
+- Install the latest version of `create-next-app` globally.
   - Start a terminal session and on the command line type:
   - `npm install -g create-next-app@latest`
 - Create and Run a templated Next.js Project
   - Right mouse click on the directory where you want the project and choose:
   - `Open In Integrated Terminal`.
-  - Create the project:
+  - Create the project by running the following in the terminal:
   - `npx create-next-app src`
   - Go in to the new project folder:
   - `cd src`
