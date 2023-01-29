@@ -3,7 +3,13 @@ import Image from 'next/image'
 import { Inter } from '@next/font/google'
 import styles from '@/styles/Home.module.css'
 
-import Hello from '../components/Hello.js'
+// our custom components
+import {Hello1} from '../components/Hello'
+import {Hello2} from '../components/Hello'
+import {Hello3} from '../components/Hello'
+import {NewConcept1} from '../components/NewConcept'
+import {NewConcept2} from '../components/NewConcept'
+import ComponentWrapper from '../components/ComponentWrapper'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -20,7 +26,16 @@ export default function Home() {
       <h1 >
         Welcome to Next/React
       </h1>
-      <Hello />
+      <Hello1 />
+        <Hello2 />
+        <Hello3 />
+        <NewConcept1 concept={"how to import components"} textColor={"green"} />
+        <NewConcept2 concept={"how to use props in a component"} textColor={"purple"} />
+        <ComponentWrapper textColor={"blue"}>
+          <h4>Just a random h4</h4>
+          <Hello1 />
+          <NewConcept1 concept={"how to have fun"} textColor={"red"} />
+        </ComponentWrapper>
       </main>
     </>
   )
