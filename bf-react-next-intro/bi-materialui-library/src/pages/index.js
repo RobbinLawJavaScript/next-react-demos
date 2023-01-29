@@ -3,7 +3,10 @@ import Image from 'next/image'
 import { Inter } from '@next/font/google'
 import styles from '@/styles/Home.module.css'
 
-import Hello from '../components/Hello.js'
+// Our material ui imports.
+import Container from '@mui/material/Container';
+import Typography from '@mui/material/Typography';
+import Box from '@mui/material/Box';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -17,10 +20,16 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-      <h1 >
-        Welcome to Next/React
-      </h1>
-      <Hello />
+        <Container maxWidth="md">
+          <Box sx={{ my: 4 }}>
+            <Typography variant="h2" component="h2">
+              MUI Example
+            </Typography>
+            <Typography variant="p" component="p">
+              You can perhaps see why this is a popular package.
+            </Typography>   
+          </Box>
+        </Container>
       </main>
     </>
   )

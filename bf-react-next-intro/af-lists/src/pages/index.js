@@ -3,7 +3,12 @@ import Image from 'next/image'
 import { Inter } from '@next/font/google'
 import styles from '@/styles/Home.module.css'
 
-import Hello from '../components/Hello.js'
+// Our imports
+import {SimpsonsJsxInsideMap} from '../components/SimpsonsCharacters'
+import {SimpsonsMapInsideJsx} from '../components/SimpsonsCharacters'
+import Blog from '../components/Blog'
+import {somePosts} from '../aa-data/Data'
+import InterestingPeople from '../components/InterestingPeople'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -17,10 +22,13 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-      <h1 >
-        Welcome to Next/React
-      </h1>
-      <Hello />
+        <h1>
+            Lists Example
+        </h1>
+        <SimpsonsJsxInsideMap />
+        <SimpsonsMapInsideJsx />
+        <Blog posts={somePosts} />
+        <InterestingPeople />
       </main>
     </>
   )

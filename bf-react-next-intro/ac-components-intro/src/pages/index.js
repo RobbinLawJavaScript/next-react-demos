@@ -23,10 +23,10 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-      <h1 >
-        Welcome to Next/React
-      </h1>
-      <Hello1 />
+        <h1 >
+          Welcome to Next/React
+        </h1>
+        <Hello1 />
         <Hello2 />
         <Hello3 />
         <NewConcept1 concept={"how to import components"} textColor={"green"} />
