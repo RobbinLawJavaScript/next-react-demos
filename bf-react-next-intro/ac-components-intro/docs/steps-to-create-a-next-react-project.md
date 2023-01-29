@@ -1,19 +1,23 @@
-# Steps to Create a Next/React Project
+# Steps to Create a Next/React Project 
+# Also Creating a Simple Component and Consuming It
 
 - See if `create-next-app` is on this machine.
   - Start a terminal session and on the command line type:
   - `create-next-app --version`
-  - If a version comes back it is installed already, no need to do next step.
+  - If a version comes back it is installed already, no need to do next step, unless you want the latest version.
 - Install the latest version of `create-next-app` globally.
   - Start a terminal session and on the command line type:
   - `npm install -g create-next-app@latest`
 - Create and Run a templated Next.js Project
-  - Right mouse click on the directory where you want the project and choose:
+  - Right mouse click on the directory where you want to place the new project and choose:
   - `Open In Integrated Terminal`.
   - Create the project by running the following in the terminal:
   - `npx create-next-app src`
+  - Answer NO to all 4 questions, and leave the import alias as default.
   - Go in to the new project folder:
   - `cd src`
+  - Install the material library with the following:
+  - `npm install @mui/material @emotion/react @emotion/styled`
   - Install all dependencies:
   - `npm install`
   - Run the project:
@@ -25,7 +29,7 @@
 ```js
 <main className={styles.main}>
   <h1 >
-    Fundamentals of Components Example
+    Welcome to Next/React
   </h1>
 </main>
 ```
@@ -43,19 +47,30 @@ export default function Hello() {
   )
 }
 ```
-- Import your newly created component in the `index.js` file in your `pages` folder with the following
+- Import your newly created component in the `index.js` file in your `pages` folder with the following. Place it after the other imports.
 ```js
 import Hello from '../components/Hello.js'
 ```
-- Use that component in main.
+- Use that new component in main.
 ```jsx
 <main className={styles.main}>
   <h1 >
-    Fundamentals Components Example
+    Welcome to Next/React
   </h1>
   <Hello />
 </main>
 ```
 - Observe the differences on the page as you make the changes.
 
-Note: this notation is how we're going to name components throughout the course. That is the file having the same name as the name of the component.
+- In the `styles/Home.module.css` file change the `.main justify-content property` from `space-between` to `center` as shown below:
+```css
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 6rem;
+  min-height: 100vh;
+}
+```
+- Observe the differences on the page as you make these changes.
