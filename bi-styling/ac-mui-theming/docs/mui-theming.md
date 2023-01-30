@@ -1,6 +1,9 @@
 # Material UI
 
 - [The Magic of the sx prop](https://mui.com/system/getting-started/the-sx-prop/)
+- [MUI Theme Creator](https://bareynol.github.io/mui-theme-creator/)
+
+
 
 # Steps
 1. Install and run the project 
@@ -32,19 +35,15 @@ const themeOptions = {
   },
 };
 
-const theme = createTheme(themeOptions);
+export const theme = createTheme(themeOptions);
 
-const darkTheme = createTheme({
+export const darkTheme = createTheme({
   palette: {
     mode: 'dark',
   },
 });
-
-export { theme }
 ```
 This is creating your theme you will be able to customize a lot of options by taking a look here: 
-
-Note: For the theme options here is where you can really customize your theme by seeing it with the [theme creator](https://bareynol.github.io/mui-theme-creator/)
 
 4. In your `pages/_app.js`, import your theme and the `ThemeProvider` like below.
 ```js
@@ -53,16 +52,16 @@ import { theme } from '../utils/theme/config.js'
 ```
 5. in your `pages/_app.js` wrap your entire application 
 ```js
-function MyApp({ Component, pageProps }) {
-  return <ThemeProvider theme={theme}>
+export default function MyApp({ Component, pageProps }) {
+  return (
+  <ThemeProvider theme={theme}>
     <Component {...pageProps} />
   </ThemeProvider>
+  )
 }
-
-export default MyApp
 ```
 
-6. In your `pages/home.js` add some colors so that you can see the differences on the page, add ` color="primary"` on the `Typography` Elements.
+6. In your `pages/index.js` add some colors so that you can see the differences on the page, add ` color="primary"` on the `Typography` Elements.
 ```jsx
 <Box sx={{ my: 4 }}>
   <Typography variant="h2" component="h2" color="primary">
@@ -73,7 +72,7 @@ export default MyApp
   </Typography>
 </Box>
 ```
-Note: You can see the differences in the theme now if you change the `createTheme` `utils/theme/config.js` 
+Note: You can see the differences in the theme now if you change the `createTheme` in the file `utils/theme/config.js` 
 ```js
 const theme = createTheme({});
 ```
@@ -86,7 +85,7 @@ Change it back to use your theme.
 <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap" rel="stylesheet" />
 ```
 - in the `pages/index.js` modify the `Head` so that it includes the links above
-Note: there's different ways to link the conts here, but this is just one way to do so.
+Note: there's different ways to link the fonts here, but this is just one way to do so.
 - in the `utils/theme/config.js` edit the `themeOptions` so that it adds the following in the object.
 ```js
   typography: {
