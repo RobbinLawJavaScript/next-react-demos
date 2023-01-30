@@ -1,6 +1,5 @@
 // https://bareynol.github.io/mui-theme-creator/
 
-import * as React from 'react';
 import { Box, ThemeProvider, createTheme } from '@mui/system';
 
 const theme = createTheme({
