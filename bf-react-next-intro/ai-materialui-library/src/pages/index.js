@@ -21,7 +21,7 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         {/* maxWidth can be xs | sm | md | lg | xl | false */}
-        <Container maxWidth="md">
+        <Container maxWidth="sm">
           {/* my	margin-top, margin-bottom 
               By default margin is 8px so with
               my: 4 margin-top and margin-bottom

@@ -4,8 +4,7 @@ import { Inter } from '@next/font/google'
 import styles from '@/styles/Home.module.css'
 
 // Our imports
-import {SimpsonsJsxInsideMap} from '../components/SimpsonsCharacters'
-import {SimpsonsMapInsideJsx} from '../components/SimpsonsCharacters'
+import {SimpsonsJsxInsideMap, SimpsonsMapInsideJsx} from '../components/SimpsonsCharacters'
 import Blog from '../components/Blog'
 import {somePosts} from '../aa-data/Data'
 import InterestingPeople from '../components/InterestingPeople'

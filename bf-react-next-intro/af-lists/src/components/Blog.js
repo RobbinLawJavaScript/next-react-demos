@@ -3,9 +3,9 @@
 // Here we get the data via our props.
 // Again we are showing both ways of using .map().
 
-export default function Blog(props) {
+export default function Blog({posts}) {
 
-  const JsxInsideMap = props.posts.map((post) =>
+  const JsxInsideMap = posts.map((post) =>
   <div key={post.id}>
     <h3>{post.title}</h3>
     <p>{post.content}</p>
@@ -14,7 +14,7 @@ export default function Blog(props) {
   
   const MapInsideJsx = (
   <div>
-    {props.posts.map((post) =>
+    {posts.map((post) =>
     <div key={post.id}>
       <h3>{post.title}</h3>
       <p>{post.content}</p>
@@ -26,7 +26,9 @@ export default function Blog(props) {
   return (
   <div>
     <h2>JsxInsideMap</h2>
-    {JsxInsideMap}
+    <div>
+      {JsxInsideMap}
+    </div>
     <hr />
     <h2>MapInsideJsx</h2>
     {MapInsideJsx}
