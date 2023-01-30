@@ -4,11 +4,8 @@ import { Inter } from '@next/font/google'
 import styles from '@/styles/Home.module.css'
 
 // our custom components
-import {Hello1} from '../components/Hello'
-import {Hello2} from '../components/Hello'
-import {Hello3} from '../components/Hello'
-import {NewConcept1} from '../components/NewConcept'
-import {NewConcept2} from '../components/NewConcept'
+import {Hello1, Hello2, Hello3} from '../components/Hello'
+import {NewConcept1, NewConcept2} from '../components/NewConcept'
 import ComponentWrapper from '../components/ComponentWrapper'
 
 const inter = Inter({ subsets: ['latin'] })
