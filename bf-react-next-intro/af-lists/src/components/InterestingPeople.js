@@ -6,9 +6,9 @@ import GetImageUrl from '../aa-utils/GetImageUrl.js';
 
 export default function InterestingPeople() {
   return (
-  <ul>
+  <ul style={{listStyleType: "none"}} >
     {people.map(person=>
-    <li key={person.id}>
+    <li key={person.id} >
       <img src={GetImageUrl(person)} alt={person.name} />
       <p>
         <b>{person.name}</b> {person.profession} known for {person.accomplishment}
