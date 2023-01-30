@@ -34,7 +34,7 @@
 |3-Jan23|Next-React Intro|Next-React Intro|
 |4-Jan30|UI-Styling|UI-Styling|A1|
 |5-Feb6|React Event & State Fundamentals|React Event & State Fundamentals|Q1|
-|6-Feb13|||A2|
+|6-Feb13|React Event & State Fundamentals|React Event & State Fundamentals|A2|
 |Break-Feb20||||
 |7-Feb27|REST API and Stateful Applications|REST API and Stateful Applications|
 |8-Mar6|React Component Lifecycle|React Component Lifecycle|A3|

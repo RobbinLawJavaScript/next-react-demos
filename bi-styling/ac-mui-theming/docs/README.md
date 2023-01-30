@@ -1,8 +1,6 @@
-# React Component Library - Material UI
+# Material UI
 
-# Why?
-
-The Material UI package gives us the ability to style and customize the package to look and feel the way you want.
+- [The Magic of the sx prop](https://mui.com/system/getting-started/the-sx-prop/)
 
 # Steps
 1. Install and run the project 
@@ -15,7 +13,7 @@ The Material UI package gives us the ability to style and customize the package 
 2. create a `utils` folder (at the root of your project) and add a folder named `theme` and create a file that will be named `config.js`
 3. within the `utils/theme/config.js` add the following lines
 ```js
-import { createTheme, createMuiTheme } from '@mui/material'
+import { createTheme } from '@mui/material'
 
 const themeOptions = {
   palette: {
@@ -44,7 +42,7 @@ const darkTheme = createTheme({
 
 export { theme }
 ```
-This is creating your theme youll be able to customize a lot of options by taking a look here: 
+This is creating your theme you will be able to customize a lot of options by taking a look here: 
 
 Note: For the theme options here is where you can really customize your theme by seeing it with the [theme creator](https://bareynol.github.io/mui-theme-creator/)
 
@@ -53,7 +51,7 @@ Note: For the theme options here is where you can really customize your theme by
 import { ThemeProvider } from '@mui/material';
 import { theme } from '../utils/theme/config.js'
 ```
-5. in your `pages/_app.js` wrap your entire applicaiton 
+5. in your `pages/_app.js` wrap your entire application 
 ```js
 function MyApp({ Component, pageProps }) {
   return <ThemeProvider theme={theme}>
