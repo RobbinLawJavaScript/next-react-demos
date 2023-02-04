@@ -8,8 +8,8 @@ const theme = createTheme({
       paper: '#fedbd0',
     },
     text: {
-      primary: '#173A5E',
-      secondary: '#46505A',
+      primary: 'cyan',
+      secondary: 'yellow',
     },
     action: {
       active: '#001E3C',
@@ -27,8 +27,9 @@ export default function Example() {
       <Box
         sx={{
           bgcolor: 'background.paper',
-          boxShadow: 1,
-          borderRadius: 2,
+          boxShadow: 10,
+          borderRadius: 4,
+          m: 10,
           p: 2,
           minWidth: 300,
         }}
@@ -48,7 +49,7 @@ export default function Example() {
         >
           +18.77%
         </Box>
-        <Box sx={{ color: 'text.secondary', display: 'inline', fontSize: 14 }}>
+        <Box sx={{ color: 'text.secondary', display: 'inline', fontSize: 34 }}>
           vs. last week
         </Box>
       </Box>

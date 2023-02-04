@@ -29,7 +29,7 @@ export default function Home() {
         <Example />
         <Container maxWidth="md">
           <Box sx={{ my: 4 }}>
-            <Typography variant="h2" component="h2" color="primary">
+            <Typography variant="h2" component="h2" color="primary.main">
               MUI Example
             </Typography>
             <Typography variant="p" component="p" color="secondary">
