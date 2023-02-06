@@ -16,18 +16,18 @@ export default function TodoList () {
 
   const onTodoTextChange = (event) => {
     console.log(event.target.value)
-    //setTodoText(event.target.value)
+    setTodoText(event.target.value)
   }
 
   const onAddTodoClick = () => {
     console.log("clicked")
-    // create a new list that has allTodos and the new todos.
-    //const newAllTodoList = [...allTodos, todoText]
-    //console.log(newAllTodoList)
-    // set the todoList
-    //setAllTodos(newAllTodoList)
-    // reset the value of the todo text.
-    //setTodoText("")
+    // Create a new list that has allTodos and the new todos.
+    const newAllTodoList = [...allTodos, todoText]
+    console.log(newAllTodoList)
+    // Set the todoList
+    setAllTodos(newAllTodoList)
+    // Reset the value of the todo text.
+    setTodoText("")
   }
 
   return  (

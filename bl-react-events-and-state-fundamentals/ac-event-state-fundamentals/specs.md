@@ -50,9 +50,10 @@ Note: this is going to just print out the value of the input to the console.
   variant="standard"
   sx={{width: '100%'}}
   onChange={onTodoTextChange}
+  value={todoText}
 />
 ```
-- Observe that when you write in the text field input the event is fired and a console message is printed
+- Observe that when you write in the text field input the event is fired and a console message is printed.
 6. Let's add an event on the button that listens to onClick events.
 - first create a function in our `TodoList` component
 ```jsx
@@ -86,7 +87,7 @@ Note: the argument being passed into the  `useState("")` will be the initial val
     setTodoText(event.target.value)
   }
 ```
-- on the `TextField` set the value to the `todoText` and everytime the input changes fire the `onTodoTextChange` function
+- on the `TextField` set the value to the `todoText` and every time the input changes fire the `onTodoTextChange` function
 ```jsx
   <TextField
     id="standard-basic"
@@ -97,7 +98,7 @@ Note: the argument being passed into the  `useState("")` will be the initial val
     value={todoText}
   />
 ```
-Note: use `setTodoText` when you want to change the variable `todoText` (this is in the `onTodoTextChange` function), as well 
+Note: use `setTodoText` when you want to change the variable `todoText` (this is in the `onTodoTextChange` function), as well. 
 
 
 8. Let's see the difference on the page. Under the button add the following code to see our state changing.
@@ -137,13 +138,15 @@ Note: You can see here that the original value of allTodos is an empty list.
 ```jsx
   <List sx={{width: `100%`}}>
     {allTodos.map((todoItem, index)=> {
-      return <ListItem key={index}>
+      return (
+      <ListItem key={index}>
         <ListItemText>
           <Typography variant="p" component="div">
             {todoItem}
           </Typography>
         </ListItemText>
       </ListItem>
+      )
     })}
   </List>
 ```
