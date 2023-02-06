@@ -126,7 +126,7 @@ Note: You can see here that the original value of allTodos is an empty list.
     setTodoText("")
   }
 ```
-11. Display the list right under our our current input so that we can see the differnces of the list (replay the exising value.)
+11. Display the list right under our our current input so that we can see the differences of the list (replay the exising value.)
 ```jsx
   <Grid item xs={12}>
     Current input text: {todoText} <br/>
