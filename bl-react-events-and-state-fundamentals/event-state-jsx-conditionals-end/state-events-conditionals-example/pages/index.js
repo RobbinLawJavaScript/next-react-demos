@@ -1,7 +1,5 @@
 import { useState } from 'react'
-
 import { MOVIE_LIST } from '../utils/movies'
-
 import SimpleListItem from '../components/SimpleListItem'
 
 import Head from 'next/head'
@@ -26,7 +24,7 @@ export default function Home() {
   const [errorMessage, setErrorMessage] = useState("")
 
   const handleSubmit = (event) => {
-    {try {
+    try {
       event.preventDefault()
       console.log(`year: ${year}`)
       console.log(`search: ${search}`)
@@ -35,19 +33,13 @@ export default function Home() {
     } catch (error) {
       console.error(error);
       setErrorMessage(error.message)
-    }}
-  }
-
-  const isNumber = (value) => {
-    return !isNaN(value)
+    }
   }
 
   const validateSearch = () => {
-    console.log("validateSearch")
-    console.log(isNumber(year))
+    setErrorMessage("")
     //if the year is empty
     if (year.trim().length === 0) {
-      setErrorMessage("")
       return
     }
     if (year.trim().length !== 4) {
@@ -61,7 +53,6 @@ export default function Home() {
     if((year < 1920) || (year > currentYear)) {
       throw new Error(`"${year}" is not in the range 1920 to ${currentYear}`)
     }
-    setErrorMessage("")
   }
 
   const filterMovies = () => {
