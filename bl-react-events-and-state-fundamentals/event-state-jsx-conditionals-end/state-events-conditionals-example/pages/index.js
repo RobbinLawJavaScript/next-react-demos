@@ -1,3 +1,6 @@
+// Regular Expressions
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions
+
 import { useState } from 'react'
 import { MOVIE_LIST } from '../utils/movies'
 import SimpleListItem from '../components/SimpleListItem'
@@ -37,6 +40,9 @@ export default function Home() {
   }
 
   const validateSearch = () => {
+    // We set the errorMessage is "" here so that
+    // if all the validation tests pass no errors
+    // will be thrown and the Alert will NOT show.
     setErrorMessage("")
     //if the year is empty
     if (year.trim().length === 0) {
