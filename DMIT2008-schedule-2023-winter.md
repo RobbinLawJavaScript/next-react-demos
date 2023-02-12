@@ -18,8 +18,8 @@
 | Assignment 3 | github | week 8  | 10 |
 | Assignment 4a| github | week 10  | 10 |
 | Assignment 4b| github | week 12  | 10 |
-| Assignment 5 | github | week 15  | 5 |
-| Theory Assessment | github | week 14  | 10 |
+| Assignment 5 | github | week 15  | 10 |
+| Theory Assessment | github | week 14  | 5 |
 |Total|||100|
 
 ---
@@ -33,14 +33,14 @@
 |3-Jan23|Next-React Intro|Next-React Intro|
 |4-Jan30|UI-Styling|UI-Styling|A1|
 |5-Feb6|React Event & State Fundamentals|React Event & State Fundamentals|Q1|
-|6-Feb13|React Event & State Fundamentals|React Event & State Fundamentals|A2|
+|6-Feb13|REST API and Stateful Applications|WP-A2|A2|
 |Break-Feb20||||
 |7-Feb27|REST API and Stateful Applications|REST API and Stateful Applications|
-|8-Mar6|React Component Lifecycle|React Component Lifecycle|A3|
+|8-Mar6|React Component Lifecycle|WP-A3|A3|
 |9-Mar13|||
-|10-Mar20|React Pages||A4a|
+|10-Mar20|React Pages|WP-A4a|A4a|
 |11-Mar27|||
-|12-Apr3|||A4b|
+|12-Apr3||WP-A4b|A4b|
 |13-Apr10|Deployment|Frontend Framework Features|
-|14-Apr17|Testing|Testing|Theory Assessment|
-|15-Apr24|||A5|
+|14-Apr17|Testing|WP-Theory|Theory Assessment|
+|15-Apr24|Testing|WP-A5|A5|
