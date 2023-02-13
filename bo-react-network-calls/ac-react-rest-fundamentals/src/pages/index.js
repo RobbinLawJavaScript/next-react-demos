@@ -14,6 +14,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 
 export default function Home() {
+  const DOG_FACTS_URL_ENDPOINT = 'https://dog-api.kinduff.com/api/facts'
   const RANDOM_QUOTE_URL = 'https://api.quotable.io/random'
   const [quoteData, setQuoteData] = useState({
     quote: "Quote here.",
@@ -21,12 +22,32 @@ export default function Home() {
   })
 
   const handleClick = async () => {
-    const response = await fetch(RANDOM_QUOTE_URL)
-    const data = await response.json()
-    setQuoteData({
-      quote: data.content,
-      author: data.author
-    })
+    try {
+      const response = await fetch(RANDOM_QUOTE_URL)
+      const data = await response.json()
+      setQuoteData({
+        quote: data.content,
+        author: data.author
+      })
+    } catch (error) {
+      console.log (`Hey Man we got an error of: ${error.message}`)
+    }
+    
+  }
+
+  const handleClick3 = async () => {
+    try {
+      const response = await fetch(DOG_FACTS_URL_ENDPOINT)
+      const data = await response.json()
+      setQuoteData({
+        quote: data.facts[0],
+        author: 'Hey man'
+      })
+    } catch (error) {
+      console.log('wow')
+      console.log (`Hey Man we got an error of: ${error.message}`)
+    }
+    
   }
 
   const handleClick1 = () => {
