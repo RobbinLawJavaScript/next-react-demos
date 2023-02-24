@@ -14,8 +14,11 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 
 export default function Home() {
-  const DOG_FACTS_URL_ENDPOINT = 'https://dog-api.kinduff.com/api/facts'
   const RANDOM_QUOTE_URL = 'https://api.quotable.io/random'
+  //const RANDOM_QUOTE_URL = 'https://bad-server.io'
+  //const RANDOM_QUOTE_URL = 'https://api.quotable.io/bad-endpoint'
+  const DOG_FACTS_URL_ENDPOINT = 'https://dog-api.kinduff.com/api/facts'
+
   const [quoteData, setQuoteData] = useState({
     quote: "Quote here.",
     author: "Author here"
@@ -24,41 +27,36 @@ export default function Home() {
   const handleClick = async () => {
     try {
       const response = await fetch(RANDOM_QUOTE_URL)
+      if (!response.ok) {
+        throw new Error(`Bad status = ${response.status}`);
+       }
       const data = await response.json()
       setQuoteData({
         quote: data.content,
         author: data.author
       })
-    } catch (error) {
-      console.log (`Hey Man we got an error of: ${error.message}`)
-    }
-    
-  }
-
-  const handleClick3 = async () => {
-    try {
-      const response = await fetch(DOG_FACTS_URL_ENDPOINT)
-      const data = await response.json()
-      setQuoteData({
-        quote: data.facts[0],
-        author: 'Hey man'
-      })
-    } catch (error) {
-      console.log('wow')
-      console.log (`Hey Man we got an error of: ${error.message}`)
-    }
-    
+    } 
+    catch (error) {
+      console.error (`Error of: ${error.message}`)
+    } 
   }
 
   const handleClick1 = () => {
     fetch(RANDOM_QUOTE_URL)
       .then((response)=> {
+        if (!response.ok) {
+          throw new Error(`Bad status = ${response.status}`);
+         }
         return response.json()
-      }).then((data)=> {
+      })
+      .then((data)=> {
         setQuoteData({
           quote: data.content,
           author: data.author
         })
+      })
+      .catch((error)=> {
+        console.error(`Error of: ${error.message}`)
       })
   }
 
@@ -89,7 +87,12 @@ export default function Home() {
               pb: 6,
             }}
           >
-            <Typography variant="h5" align="center" color="text.primary" paragraph>
+            <Typography 
+              variant="h5" 
+              align="center" 
+              color="text.primary" 
+              paragraph
+            >
               {quoteData.quote}
             </Typography>
             <Typography
@@ -104,7 +107,6 @@ export default function Home() {
             <Box
              display="flex"
              justifyContent="center"
-
             >
               <Button
                 variant="contained"

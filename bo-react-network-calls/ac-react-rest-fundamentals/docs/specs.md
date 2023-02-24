@@ -90,17 +90,22 @@ const RANDOM_QUOTE_URL = 'https://api.quotable.io/random'
 ```
 - change `handleClick` function so that we fetch the url and with the result we use the `setQuoteData` function to change the values.
 ```js
-  const handleClick = () => {
-    fetch(RANDOM_QUOTE_URL)
-      .then((response)=> {
-        return response.json()
-      }).then((data)=> {
-        setQuoteData({
-          quote: data.content,
-          author: data.author
-        })
-      })
-  }
+const handleClick = async () => {
+  try {
+    const response = await fetch(RANDOM_QUOTE_URL)
+    if (!response.ok) {
+      throw new Error(`Bad status = ${response.status}`);
+      }
+    const data = await response.json()
+    setQuoteData({
+      quote: data.content,
+      author: data.author
+    })
+  } 
+  catch (error) {
+    console.error (`Error of: ${error.message}`)
+  } 
+}
 ```
 Note: you might be thinking "how did we find the `data.content` and `data.author`?", we found this from looking at the documentation and using our REST API client in step 1.
 
