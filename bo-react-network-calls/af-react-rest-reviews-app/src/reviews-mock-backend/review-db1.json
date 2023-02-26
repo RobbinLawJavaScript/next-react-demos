@@ -7,22 +7,28 @@
       "rating": 8
     },
     {
+      "id": 2,
+      "title": "The Lord of the rings",
+      "comment": "A classic movie and a classic book series as well!",
+      "rating": 10
+    },
+    {
       "title": "Game of thrones",
       "comment": "Books were graphic, show was great until the last 2 seasons",
       "rating": 9,
-      "id": 2
+      "id": 3
+    },
+    {
+      "title": "fight club",
+      "comment": "a great movie and had a great end to the book",
+      "rating": "9",
+      "id": 4
     },
     {
       "title": "The Sandman",
       "comment": "Haven't seen it yet but the comic books are way too fantastic",
       "rating": "9",
-      "id": 12
-    },
-    {
-      "title": "The Sandman",
-      "comment": "Haven't seen it yet but the comic books are way too fantastic",
-      "rating": "9",
-      "id": 13
+      "id": 5
     }
   ]
 }
