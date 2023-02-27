@@ -163,10 +163,10 @@ export default function Home() {
           {reviews.map((adaptation, index)=> {
             return (
               <AdaptationReviewCard
-                  key={index}
-                  rating={adaptation.rating}
-                  title={adaptation.title}
-                  comment={adaptation.comment}
+                key={index}
+                rating={adaptation.rating}
+                title={adaptation.title}
+                comment={adaptation.comment}
               />
             )
           })}
