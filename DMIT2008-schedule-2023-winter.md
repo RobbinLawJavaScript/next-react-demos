@@ -2,8 +2,7 @@
 
 ## Links
 
-- [Link to Github Demos Repo](https://github.com/RobbinLawJavaScript/next-react-demos)
-- [Link to Github Classroom and your Assessments Repo](#)
+- [Link to Robbin Law's Github Demos Repo](https://github.com/RobbinLawJavaScript/next-react-demos)
 - [DMIT 2008 Student Website](https://dmit-2008.github.io/dmit2008/)
 
 ---
@@ -18,8 +17,8 @@
 | Assignment 3 | github | week 8  | 10 |
 | Assignment 4a| github | week 10  | 10 |
 | Assignment 4b| github | week 12  | 10 |
-| Assignment 5 | github | week 15  | 10 |
 | Theory Assessment | github | week 14  | 5 |
+| Assignment 5 | github | week 15  | 10 |
 |Total|||100|
 
 ---
