@@ -26,16 +26,16 @@
 
 ## Calendar
 
-|Week|Day1|Day2|Assessments Due|
+|Week|Day1|Day2|Due|
 |:-:|:-:|:-:|:-:|
-|1-Jan9|Environment-Setup & JavaScript Review|Environment-Setup & JavaScript Review|
+|1-Jan9|Env-Setup & JavaScript Review|Env-Setup & JavaScript Review|
 |2-Jan16|JavaScript Review|JavaScript Review|
 |3-Jan23|Next-React Intro|Next-React Intro|
 |4-Jan30|UI-Styling|UI-Styling|A1|
-|5-Feb6|React Event & State Fundamentals|React Event & State Fundamentals|Q1|
-|6-Feb13|REST API and Stateful Applications|WP-A2|A2|
+|5-Feb6|React Event & State Basics|React Event & State Basics|Q1|
+|6-Feb13|REST API|WP-A2|A2|
 |Break-Feb20||||
-|7-Feb27|REST API and Stateful Applications|REST API and Stateful Applications|
+|7-Feb27|REST API|REST API|
 |8-Mar6|React Component Lifecycle|WP-A3|A3|
 |9-Mar13|||
 |10-Mar20|React Pages|WP-A4a|A4a|

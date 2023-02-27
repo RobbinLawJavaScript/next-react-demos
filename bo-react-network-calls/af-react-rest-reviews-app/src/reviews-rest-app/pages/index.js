@@ -4,27 +4,21 @@ import Head from 'next/head'
 import Image from 'next/image'
 
 import AppBar from '@mui/material/AppBar';
-
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
-
 import Container from '@mui/material/Container';
-
 import InputLabel from '@mui/material/InputLabel';
 import Grid from '@mui/material/Grid';
 import FormControl from '@mui/material/FormControl';
 import FormLabel from '@mui/material/FormLabel';
 import FormControlLabel from '@mui/material/FormControlLabel';
-
 import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
-
 import TextField from '@mui/material/TextField';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 
 import AdaptationReviewCard from '../components/AdaptationReviewCard'
-
 
 export default function Home() {
   const [reviews, setReviews] = useState([])
@@ -59,31 +53,6 @@ export default function Home() {
     } 
   }
 
-
-  const handleSubmit1 = (event) => {
-    event.preventDefault()
-    fetch(`http://localhost:5000/reviews`, {
-      method: "POST",
-      headers: {
-        'Content-Type': 'application/json'       
-      },
-      body: JSON.stringify({
-        title,
-        comment: comments,
-        rating
-      })
-    }).then((response)=> {
-      return response.json()
-    }).then((data)=> {
-      // you see here we're making a new list
-      // with the first element being "data", the object we've just created.
-      // and the next elements as all of the rest of the existing "reviews"
-      // this is using the spread operator.
-      setReviews([data, ...reviews])
-    })
-     
-  }
-
   const loadAllReviewsButton = async () => {
     try {
       const response = await fetch(URL_WITH_END_POINT)
@@ -96,15 +65,6 @@ export default function Home() {
     catch (error) {
       console.error (`Error of: ${error.message}`)
     } 
-  }
-
-  const loadAllReviewsButton1 = () => {
-    fetch(`http://localhost:5000/reviews`)
-      .then((response)=> {
-        return response.json()
-      }).then((data)=> {
-        setReviews(data)
-      })
   }
 
   return (
@@ -201,12 +161,14 @@ export default function Home() {
             </Button>
           </Box>
           {reviews.map((adaptation, index)=> {
-            return <AdaptationReviewCard
-                key={index}
-                rating={adaptation.rating}
-                title={adaptation.title}
-                comment={adaptation.comment}
+            return (
+              <AdaptationReviewCard
+                  key={index}
+                  rating={adaptation.rating}
+                  title={adaptation.title}
+                  comment={adaptation.comment}
               />
+            )
           })}
         </Container>
       </main>
