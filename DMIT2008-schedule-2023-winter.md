@@ -33,9 +33,9 @@
 |3-Jan23|Next-React Intro|Next-React Intro|
 |4-Jan30|UI-Styling|UI-Styling|A1|
 |5-Feb6|React Event & State Basics|React Event & State Basics|Q1|
-|6-Feb13|REST API|WP-A2|A2|
+|6-Feb13|REST API's|WP-A2|A2|
 |Break-Feb20||||
-|7-Feb27|REST API|REST API|
+|7-Feb27|REST API's|REST API's|
 |8-Mar6|React Component Lifecycle|WP-A3|A3|
 |9-Mar13|||
 |10-Mar20|React Pages|WP-A4a|A4a|
