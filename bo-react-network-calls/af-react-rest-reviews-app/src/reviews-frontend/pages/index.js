@@ -23,10 +23,12 @@ import AdaptationReviewCard from '../components/AdaptationReviewCard'
 export default function Home() {
   const [reviews, setReviews] = useState([])
   const [title, setTitle] = useState("")
-  const [comments, setComments] = useState("")
+  const [comment, setComment] = useState("")
   const [rating, setRating] = useState(0)
 
   const URL_WITH_END_POINT = `http://localhost:5000/reviews`
+  //const URL_WITH_END_POINT = `http://bad-server`
+  //const URL_WITH_END_POINT = `http://localhost:5000/bad-endpoint`
 
   const handleSubmit = async (event) => {
     try {
@@ -38,7 +40,7 @@ export default function Home() {
         },
         body: JSON.stringify({
           title,
-          comment: comments,
+          comment,
           rating
         })
       })
@@ -56,6 +58,7 @@ export default function Home() {
   const loadAllReviewsButton = async () => {
     try {
       const response = await fetch(URL_WITH_END_POINT)
+      console.log(`ok is: ${response.ok}`)
       if (!response.ok) {
         throw new Error(`Bad status = ${response.status}`);
        }
@@ -107,11 +110,11 @@ export default function Home() {
                 <TextField
                   id="review-comments"
                   name="review-comments"
-                  label="Comments"
+                  label="Comment"
                   fullWidth
                   variant="standard"
-                  value={comments}
-                  onChange={(event)=> { setComments(event.target.value) }}
+                  value={comment}
+                  onChange={(event)=> { setComment(event.target.value) }}
                 />
               </Grid>
               <Grid item xs={12} sm={12}>
