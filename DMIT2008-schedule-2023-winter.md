@@ -36,7 +36,7 @@
 |Break-Feb20||||
 |7-Feb27|REST API's|REST API's|
 |8-Mar6|React Component Lifecycle|WP-A3|A3|
-|9-Mar13|||
+|9-Mar13|React Component Lifecycle|React Component Lifecycle|
 |10-Mar20|React Pages|WP-A4a|A4a|
 |11-Mar27|||
 |12-Apr3||WP-A4b|A4b|
