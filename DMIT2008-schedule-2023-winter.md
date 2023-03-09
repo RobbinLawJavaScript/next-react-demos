@@ -31,13 +31,13 @@
 |2-Jan16|JavaScript Review|JavaScript Review|
 |3-Jan23|Next-React Intro|Next-React Intro|
 |4-Jan30|UI-Styling|UI-Styling|A1|
-|5-Feb6|Event-State Basics|Event-State Basics|Q1|
+|5-Feb6|Event-State (useState)|Event-State (useState)|Q1|
 |6-Feb13|REST API's|WP A2|A2|
 |Break-Feb20||||
 |7-Feb27|REST API's|REST API's|
-|8-Mar6|Component Lifecycle|WP A3|A3|
-|9-Mar13|Component Lifecycle|Component Lifecycle|
-|10-Mar20|React Pages|WP A4a|A4a|
+|8-Mar6|Component Lifecycle (useEffect)|WP A3|A3|
+|9-Mar13|Component Lifecycle (useEffect)|Component Lifecycle (useEffect)|
+|10-Mar20|Next Pages|WP A4a|A4a|
 |11-Mar27|||
 |12-Apr3||WP A4b|A4b|
 |13-Apr10|Deployment|Frontend Framework Features|
