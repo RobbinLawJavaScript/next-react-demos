@@ -14,10 +14,9 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 
 export default function Home() {
-  const RANDOM_QUOTE_URL = 'https://api.quotable.io/random'
-  //const RANDOM_QUOTE_URL = 'https://bad-server.io'
-  //const RANDOM_QUOTE_URL = 'https://api.quotable.io/bad-endpoint'
-  const DOG_FACTS_URL_ENDPOINT = 'https://dog-api.kinduff.com/api/facts'
+  const BASE_URL_WITH_END_POINT = 'https://api.quotable.io/random'
+  //const BASE_URL_WITH_END_POINT = 'https://bad-server.io'
+  //const BASE_URL_WITH_END_POINT = 'https://api.quotable.io/bad-endpoint'
 
   const [quoteData, setQuoteData] = useState({
     quote: "Quote here.",
@@ -26,7 +25,7 @@ export default function Home() {
 
   const handleClick = async () => {
     try {
-      const response = await fetch(RANDOM_QUOTE_URL)
+      const response = await fetch(BASE_URL_WITH_END_POINT)
       if (!response.ok) {
         throw new Error(`Bad status = ${response.status}`);
        }
@@ -39,25 +38,6 @@ export default function Home() {
     catch (error) {
       console.error (`Error of: ${error.message}`)
     } 
-  }
-
-  const handleClick1 = () => {
-    fetch(RANDOM_QUOTE_URL)
-      .then((response)=> {
-        if (!response.ok) {
-          throw new Error(`Bad status = ${response.status}`);
-         }
-        return response.json()
-      })
-      .then((data)=> {
-        setQuoteData({
-          quote: data.content,
-          author: data.author
-        })
-      })
-      .catch((error)=> {
-        console.error(`Error of: ${error.message}`)
-      })
   }
 
   return (
