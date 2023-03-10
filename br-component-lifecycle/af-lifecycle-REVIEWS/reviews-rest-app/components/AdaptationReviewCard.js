@@ -10,7 +10,7 @@ import IconButton from '@mui/material/IconButton';
 
 import Typography from '@mui/material/Typography';
 
-import {deleteReviewItem} from '../utils/api/reviews.js'
+import {deleteReviewItem} from '../utils/reviews.js'
 
 export default function AdaptationReviewCard(props) {
   const deleteReviewHandler = (reviewId) => {

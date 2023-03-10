@@ -25,7 +25,7 @@ import Typography from '@mui/material/Typography';
 
 import AdaptationReviewCard from '../components/AdaptationReviewCard'
 
-import { getReviews, postReview } from '../utils/api/reviews.js'
+import { getReviews, postReview } from '../utils/reviews.js'
 
 export default function Home() {
   const [reviews, setReviews] = useState([])
