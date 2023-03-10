@@ -31,7 +31,7 @@
 |2-Jan16|JavaScript Review|JavaScript Review|
 |3-Jan23|Next-React Intro|Next-React Intro|
 |4-Jan30|UI-Styling|UI-Styling|A1|
-|5-Feb6|Event-State (useState)|Event-State (useState)|Q1|
+|5-Feb6|Events-State (useState)|Events-State (useState)|Q1|
 |6-Feb13|REST API's|WP A2|A2|
 |Break-Feb20||||
 |7-Feb27|REST API's|REST API's|
