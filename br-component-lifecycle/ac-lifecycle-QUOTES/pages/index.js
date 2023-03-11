@@ -13,7 +13,7 @@ import Container from '@mui/material/Container';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 
-import { getRandomQuote } from '../utils/api/network.js'  
+import { getRandomQuote } from '../utils/network.js'  
 
 export default function Home() {
   const DEFAULT_QUOTE = "Quote here"
@@ -25,11 +25,12 @@ export default function Home() {
   const [numberOfQuotes, setNumberOfQuotes] = useState(0)
 
   useEffect(()=> {
-    console.log("Home Mounted, see me in the console!")
+    console.log(`useEffect: Home Mounted`)
     changeQuote()
   }, [])
 
   useEffect(()=> {
+    console.log(`useEffect: quoteData Updated`)
     console.log(quoteData)
     if (quoteData.quote !== DEFAULT_QUOTE &&
         quoteData.author !== DEFAULT_AUTHOR) {
@@ -99,7 +100,6 @@ export default function Home() {
               >
                 Get New Quote
               </Button>
-
             </Box>
             <Typography
               sx={{pt: 4}}

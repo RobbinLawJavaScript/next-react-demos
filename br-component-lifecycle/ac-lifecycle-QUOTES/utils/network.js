@@ -1,4 +1,4 @@
-export const BASE_URL_WITH_END_POINT = 'https://api.quotable.io/random'
+const BASE_URL_WITH_END_POINT = 'https://api.quotable.io/random'
 
 export const getRandomQuote = async () => {
   try {
