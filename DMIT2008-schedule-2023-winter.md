@@ -14,9 +14,10 @@
 | Assignment 1 | github | week 4  | 20 |
 | Review Quiz | Moodle | week 5  | 15 |
 | Assignment 2 | github | week 6  | 20 |
-| Assignment 3 | github | week 8  | 15 |
+| Assignment 3 | github | week 8  | 10 |
 | Assignment 4a| github | week 10  | 10 |
 | Assignment 4b| github | week 12  | 10 |
+| Theory | Moodle | week 14  | 5 |
 | Assignment 5 | github | week 15  | 10 |
 |Total|||100|
 
@@ -40,5 +41,5 @@
 |11-Mar27|Routing (useRouter)|Routing (useRouter)|
 |12-Apr3|Routing (useRouter)|WP A4b|A4b|
 |13-Apr10|Deployment|Frontend Framework Features|
-|14-Apr17|Testing|Testing||
+|14-Apr17|Testing|Testing|Theory|
 |15-Apr24|Testing|WP A5|A5|
