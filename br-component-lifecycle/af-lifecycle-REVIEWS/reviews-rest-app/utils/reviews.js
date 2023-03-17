@@ -1,7 +1,7 @@
 const BASE_URL = 'http://localhost:5000'
 
 
-export const getReviews = async () => {
+export const getItems = async () => {
   try {
     const response = await fetch(`${BASE_URL}/reviews/`, {
       method: "GET",
@@ -20,7 +20,7 @@ export const getReviews = async () => {
   } 
 }
 
-export const addNewReview = async ({title, comment, rating}) => {
+export const addNewItem = async ({title, comment, rating}) => {
   try {
     const response = await fetch(`${BASE_URL}/reviews/`, {
       method: "POST",
@@ -44,7 +44,7 @@ export const addNewReview = async ({title, comment, rating}) => {
   } 
 }
 
-export const deleteReviewItem = async (id) => {
+export const deleteItem = async (id) => {
   try {
     const response = await fetch(`${BASE_URL}/reviews/${id}/`, {
       method: "DELETE"

@@ -10,14 +10,14 @@ import IconButton from '@mui/material/IconButton';
 
 import Typography from '@mui/material/Typography';
 
-import {deleteReviewItem} from '../utils/reviews.js'
+import {deleteItem} from '../utils/reviews.js'
 
 export default function AdaptationReviewCard(props) {
-  const deleteReviewHandler = (reviewId) => {
-    console.log(`deleting ${reviewId}...`)
-    deleteReviewItem(reviewId).then((data)=> {
-      props.deleteCallback(reviewId)
-    })
+
+  const deleteHandler = async (id) => {
+    console.log(`deleting ${id}`)
+    const data = await deleteItem(id)
+    props.callback()
   }
 
   return <>
@@ -28,13 +28,11 @@ export default function AdaptationReviewCard(props) {
           {props.rating}
         </Avatar>
       }
-
       action={
-        <IconButton onClick={()=> {deleteReviewHandler(props.id)}}>
+        <IconButton onClick={()=> {deleteHandler(props.id)}}>
           <DeleteIcon />
         </IconButton>
       }
-
       title={
         <Typography variant="body2" color="text.secondary">
           {props.title}

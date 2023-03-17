@@ -25,12 +25,12 @@ import Typography from '@mui/material/Typography';
 
 import AdaptationReviewCard from '../components/AdaptationReviewCard'
 
-import { getReviews, addNewReview } from '../utils/reviews.js'
+import { getItems, addNewItem } from '../utils/reviews.js'
 
 export default function Home() {
   const [reviews, setReviews] = useState([])
   const [title, setTitle] = useState("")
-  const [comments, setComments] = useState("")
+  const [comment, setComment] = useState("")
   const [rating, setRating] = useState(0)
 
   // on the client side, our function will fetch
@@ -39,33 +39,24 @@ export default function Home() {
     loadAllReviews()
   }, [])
 
-  // for debugging "reviews" purposes only
   useEffect(()=> {
     console.log(reviews)
   }, [reviews])
 
-  const deleteReviewItem = (deleteReviewId) => {
-    let allReviews = reviews.filter((review)=> {
-      return review.id !== deleteReviewId
-    })
-    setReviews(allReviews)
+  const loadAllReviews = async () => {
+    const data = await getItems()
+    setReviews(data)
   }
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault()
-    addNewReview({
+    const data = await addNewItem({
         title,
-        comment: comments,
+        comment,
         rating
-      }).then((data)=> {
-        setReviews([data, ...reviews])
-      })
-  }
-
-  const loadAllReviews = () => {
-    getReviews().then((data)=> {
-      setReviews(data)
     })
+    //setReviews([...reviews, data])
+    loadAllReviews()
   }
 
   return (
@@ -108,11 +99,11 @@ export default function Home() {
                 <TextField
                   id="review-comments"
                   name="review-comments"
-                  label="Comments"
+                  label="Comment"
                   fullWidth
                   variant="standard"
-                  value={comments}
-                  onChange={(event)=> { setComments(event.target.value) }}
+                  value={comment}
+                  onChange={(event)=> { setComment(event.target.value) }}
                 />
               </Grid>
               <Grid item xs={12} sm={12}>
@@ -158,7 +149,7 @@ export default function Home() {
             return <AdaptationReviewCard
                 key={index}
                 id={adaptation.id}
-                deleteCallback={deleteReviewItem}
+                callback={loadAllReviews}
                 rating={adaptation.rating}
                 title={adaptation.title}
                 comment={adaptation.comment}
