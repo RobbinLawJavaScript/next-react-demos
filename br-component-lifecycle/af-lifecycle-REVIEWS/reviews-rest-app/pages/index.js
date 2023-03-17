@@ -25,7 +25,7 @@ import Typography from '@mui/material/Typography';
 
 import AdaptationReviewCard from '../components/AdaptationReviewCard'
 
-import { getItems, addNewItem } from '../utils/reviews.js'
+import { getItems, addNewItem } from '../utils/network.js'
 
 export default function Home() {
   const [reviews, setReviews] = useState([])
@@ -33,8 +33,6 @@ export default function Home() {
   const [comment, setComment] = useState("")
   const [rating, setRating] = useState(0)
 
-  // on the client side, our function will fetch
-  // all of our reviews on loading of the page.
   useEffect(()=> {
     loadAllReviews()
   }, [])
@@ -44,19 +42,28 @@ export default function Home() {
   }, [reviews])
 
   const loadAllReviews = async () => {
-    const data = await getItems()
-    setReviews(data)
+    try{
+      const data = await getItems()
+      setReviews(data)
+    }
+    catch(error){
+      console.error(`catch loadAll: ${error.message}`)
+    }
   }
 
   const handleSubmit = async (event) => {
-    event.preventDefault()
-    const data = await addNewItem({
-        title,
-        comment,
-        rating
-    })
-    //setReviews([...reviews, data])
-    loadAllReviews()
+    try{
+      event.preventDefault()
+      const data = await addNewItem({
+          title,
+          comment,
+          rating
+      })
+      loadAllReviews()
+    }
+    catch(error){
+      console.error(`catch handleSubmit: ${error.message}`)
+    } 
   }
 
   return (
@@ -92,7 +99,7 @@ export default function Home() {
                   fullWidth
                   variant="standard"
                   value={title}
-                  onChange={(event)=> { setTitle(event.target.value) }}
+                  onChange={(event)=> {setTitle(event.target.value)}}
                 />
               </Grid>
               <Grid item xs={12} sm={12}>
@@ -103,7 +110,7 @@ export default function Home() {
                   fullWidth
                   variant="standard"
                   value={comment}
-                  onChange={(event)=> { setComment(event.target.value) }}
+                  onChange={(event)=> {setComment(event.target.value)}}
                 />
               </Grid>
               <Grid item xs={12} sm={12}>

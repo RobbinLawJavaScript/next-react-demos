@@ -1,3 +1,10 @@
 {
-  "reviews": []
+  "reviews": [
+    {
+      "title": "",
+      "comment": "",
+      "rating": 0,
+      "id": 5
+    }
+  ]
 }

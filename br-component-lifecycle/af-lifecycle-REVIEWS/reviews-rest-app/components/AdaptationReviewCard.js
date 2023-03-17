@@ -10,7 +10,7 @@ import IconButton from '@mui/material/IconButton';
 
 import Typography from '@mui/material/Typography';
 
-import {deleteItem} from '../utils/reviews.js'
+import {deleteItem} from '../utils/network.js'
 
 export default function AdaptationReviewCard(props) {
 

@@ -16,7 +16,8 @@ export const getItems = async () => {
     return data
   } 
   catch (error) {
-    console.error (`Error of: ${error.message}`)
+    console.error (`catch getItems: ${error.message}`)
+    throw(error)
   } 
 }
 
@@ -40,7 +41,8 @@ export const addNewItem = async ({title, comment, rating}) => {
     return data
   } 
   catch (error) {
-    console.error (`Error of: ${error.message}`)
+    console.error (`catch addNewItem: ${error.message}`)
+    throw(error)
   } 
 }
 
@@ -56,6 +58,7 @@ export const deleteItem = async (id) => {
     return data
   } 
   catch (error) {
-    console.error (`Error of: ${error.message}`)
+    console.error (`catch deleteItem: ${error.message}`)
+    throw(error)
   } 
 }
