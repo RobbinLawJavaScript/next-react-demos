@@ -17,8 +17,8 @@
 | Assignment 3 | github | week 8  | 10 |
 | Assignment 4a| github | week 10  | 10 |
 | Assignment 4b| github | week 12  | 10 |
-| Theory | Moodle | week 14  | 5 |
 | Assignment 5 | github | week 15  | 10 |
+| Theory | Moodle | week 15  | 5 |
 |Total|||100|
 
 ---
@@ -37,9 +37,9 @@
 |7-Feb27|REST API's|REST API's|
 |8-Mar6|Component Lifecycle (useEffect)|WP A3|A3|
 |9-Mar13|Component Lifecycle (useEffect)|Component Lifecycle (useEffect)|
-|10-Mar20|MUI AutoComplete Component|WP A4a|A4a|
+|10-Mar20|A4a Intro & Code Along|WP A4a|A4a|
 |11-Mar27|Routing (useRouter)|Routing (useRouter)|
-|12-Apr3|Routing (useRouter)|WP A4b|A4b|
-|13-Apr10|Deployment|Frontend Framework Features|
-|14-Apr17|Testing|Testing|Theory|
-|15-Apr24|Testing|WP A5|A5|
+|12-Apr3|A4b Intro & Code Along|WP A4b|A4b|
+|13-Apr10|Deployment & Testing|Deployment & Testing|
+|14-Apr17|Testing|Testing||
+|15-Apr24|A4b/Theory Intro & Code Along|WP A5 & Theory|A5 & Theory|
