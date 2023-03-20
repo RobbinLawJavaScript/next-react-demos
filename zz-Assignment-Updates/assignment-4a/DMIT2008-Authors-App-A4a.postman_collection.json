@@ -1,0 +1,69 @@
+{
+	"info": {
+		"_postman_id": "7662ce4e-5d63-4437-ac87-f71da10a9b2c",
+		"name": "DMIT2008-Authors-App-A4a",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25832839"
+	},
+	"item": [
+		{
+			"name": "get author by key (JK Rowling)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://openlibrary.org/authors/OL23919A.json",
+					"protocol": "https",
+					"host": [
+						"openlibrary",
+						"org"
+					],
+					"path": [
+						"authors",
+						"OL23919A.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get author works by key (JK Rowling)",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "get searchAuthors by searchQuery (def)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://openlibrary.org/search/authors.json?q=def&limit=10",
+					"protocol": "https",
+					"host": [
+						"openlibrary",
+						"org"
+					],
+					"path": [
+						"",
+						"search",
+						"authors.json"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "def"
+						},
+						{
+							"key": "limit",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
