@@ -12,12 +12,13 @@ import SimpleDetailsCard from '@components/SimpleDetailsCard'
 import LoadingCircle from '@components/LoadingCircle'
 
 
-import {getAgency} from 'api/agencies'
+import {getAgency} from '@api/agencies'
 
 export default function Agency() {
   const [agencyDetails, setAgencyDetails] = useState()
 
   const router = useRouter()
+  console.log(`router.query: ${router.query.id}`)
   const { id } = router.query
 
   useEffect(()=> {
@@ -94,6 +95,7 @@ export default function Agency() {
                     key={spaceCraft.id}
                     description={`${spaceCraft.name}`}
                     buttonCallback={()=> {
+                      console.log(`id: ${spaceCraft.id}`)
                       router.push(`/spacecraft/${spaceCraft.id}`)  
                     }}
                     buttonName="Go to SpaceCraft"

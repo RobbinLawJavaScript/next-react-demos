@@ -1,8 +1,8 @@
 const BASE_URL = "https://lldev.thespacedevs.com/2.2.0"
 
-export const getSpaceCraft = async () => {
+export const getSpaceCraft = async (id) => {
 	try {
-	  const response = await fetch(`${BASE_URL}/spacecraft/${id}/`)
+	  const response = await fetch(`${BASE_URL}/config/spacecraft/${id}/`)
 	  if (!response.ok) {
 		throw new Error(`Bad status = ${response.status}`);
 	   }

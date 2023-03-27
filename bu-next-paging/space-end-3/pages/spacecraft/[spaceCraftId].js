@@ -7,7 +7,7 @@ import Grid from '@mui/material/Grid';
 import NavBar from '@components/NavBar';
 import SimpleDetailsCard from '@components/SimpleDetailsCard';
 import LoadingCircle from '@components/LoadingCircle'
-import { getSpaceCraft } from 'api/spaceCraft';
+import { getSpaceCraft } from '@api/spaceCraft';
 
 export default function SpaceCraft() {
   const [spaceCraftDetails, setSpaceCraftDetails] = useState()
@@ -22,7 +22,7 @@ export default function SpaceCraft() {
         setSpaceCraftDetails(data)
       } 
       catch(error) {
-        console.log(`useEffect catch on getSpaceCraft: ${error.message}`)
+        console.error(`useEffect catch on getSpaceCraft: ${error.message}`)
       }
     }
     myFunc()
@@ -42,14 +42,14 @@ export default function SpaceCraft() {
         </Grid>
         <Grid item xs="4">
           <SimpleDetailsCard 
-            title={`${spaceCraftDetails.name} details`}
-            subDescription={spaceCraftDetails.description}
+            title={`${spaceCraftDetails.name} history`}
+            subDescription={spaceCraftDetails.history}
           />
         </Grid>
         <Grid item xs="4">
           <SimpleDetailsCard 
-            title={`${spaceCraftDetails.name} configuration`}
-            subDescription={spaceCraftDetails.spacecraft_config.details}
+            title={`${spaceCraftDetails.name} details`}
+            subDescription={spaceCraftDetails.details}
           />
         </Grid>
       </Grid>

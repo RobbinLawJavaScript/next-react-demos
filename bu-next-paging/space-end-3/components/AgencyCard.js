@@ -3,19 +3,20 @@ https://mui.com/material-ui/react-card/#media
 
 */
 
-import { useRouter } from 'next/router'
+import Card from '@mui/material/Card'
+import CardActions from '@mui/material/CardActions'
+import CardContent from '@mui/material/CardContent'
+import CardMedia from '@mui/material/CardMedia'
+import Button from '@mui/material/Button'
+import Typography from '@mui/material/Typography'
 
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
+import { useRouter } from 'next/router'
 
 export default function AgencyCard(props) {
   const router = useRouter()
 
   const navigateToAgencyPage = () => {
+    console.log(`navigateToAgencyPage props.id: ${props.id}`)
     router.push(`/agency/${props.id}`)
   }
 

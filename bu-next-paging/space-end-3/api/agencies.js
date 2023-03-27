@@ -14,7 +14,7 @@ export const getAgencies = async () => {
 	} 
 }
 
-export const getAgency = async () => {
+export const getAgency = async (id) => {
 	try {
 	  const response = await fetch(`${BASE_URL}/agencies/${id}/`)
 	  if (!response.ok) {
