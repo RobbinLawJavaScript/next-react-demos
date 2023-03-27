@@ -6,7 +6,8 @@ import Typography from '@mui/material/Typography'
 
 
 export default function NavBar(props) {
-  return <AppBar position="static">
+  return (
+  <AppBar position="static">
     <Toolbar>
       <Link href="/">
         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
@@ -20,4 +21,5 @@ export default function NavBar(props) {
       </Link>
     </Toolbar>
   </AppBar>
+  )
 }

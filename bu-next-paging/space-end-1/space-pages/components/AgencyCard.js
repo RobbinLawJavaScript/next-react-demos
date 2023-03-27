@@ -11,7 +11,8 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
 export default function AgencyCard(props) {
-    return <Card sx={{ marginTop: "8px", maxWidth: 345 }}>
+  return (
+  <Card sx={{ marginTop: "8px", maxWidth: 345 }}>
     {props.imageUrl && <CardMedia
       component="img"
       height="140"
@@ -33,4 +34,5 @@ export default function AgencyCard(props) {
       <Button size="small">Go to Agency</Button>
     </CardActions>
   </Card>
+  )
 }
