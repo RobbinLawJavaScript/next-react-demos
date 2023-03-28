@@ -22,7 +22,8 @@ export default function AgencyCard(props) {
 
   return (
   <Card sx={{ marginTop: "8px", maxWidth: 345 }}>
-    {props.imageUrl && <CardMedia
+    {props.imageUrl && 
+    <CardMedia
       component="img"
       height="140"
       image={props.imageUrl}

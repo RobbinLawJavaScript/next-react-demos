@@ -13,7 +13,9 @@ export default function SpaceCraft() {
   const [spaceCraftDetails, setSpaceCraftDetails] = useState()
 
   const router = useRouter()
-  const { spaceCraftId } = router.query
+  console.log(`spaceCraftDetails router.query: ${router.query.spaceCraftId}`)
+  //const { spaceCraftId } = router.query
+  const spaceCraftId = router.query.spaceCraftId
   
   useEffect(()=> {
     const myFunc = async ()=> {

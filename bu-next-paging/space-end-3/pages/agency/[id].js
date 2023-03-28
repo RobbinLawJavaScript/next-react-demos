@@ -18,13 +18,13 @@ export default function Agency() {
   const [agencyDetails, setAgencyDetails] = useState()
 
   const router = useRouter()
-  console.log(`router.query: ${router.query.id}`)
-  const { id } = router.query
+  console.log(`agencyDetails router.query: ${router.query.id}`)
+  const Id = router.query.id
 
   useEffect(()=> {
     const myFunc = async ()=> {
       try {
-        const data = await getAgency(id)
+        const data = await getAgency(Id)
         setAgencyDetails(data)
       } 
       catch(error) {
@@ -32,7 +32,7 @@ export default function Agency() {
       }
     }
     myFunc()
-  }, [id])
+  }, [Id])
 
   return <>
     <NavBar />
@@ -95,7 +95,7 @@ export default function Agency() {
                     key={spaceCraft.id}
                     description={`${spaceCraft.name}`}
                     buttonCallback={()=> {
-                      console.log(`id: ${spaceCraft.id}`)
+                      console.log(`router.push spaceCraft.id: ${spaceCraft.id}`)
                       router.push(`/spacecraft/${spaceCraft.id}`)  
                     }}
                     buttonName="Go to SpaceCraft"
