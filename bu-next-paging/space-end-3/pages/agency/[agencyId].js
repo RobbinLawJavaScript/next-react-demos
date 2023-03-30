@@ -1,7 +1,6 @@
+import Head from 'next/head'
 import {useState, useEffect} from 'react'
 import { useRouter } from 'next/router'
-
-import Head from 'next/head'
 
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
@@ -16,15 +15,20 @@ import {getAgency} from '@api/agencies'
 
 export default function Agency() {
   const [agencyDetails, setAgencyDetails] = useState()
-
+  
   const router = useRouter()
-  console.log(`agencyDetails router.query: ${router.query.id}`)
-  const Id = router.query.id
+  
+  const agencyId = router.query.agencyId
+
+  console.log(`Agency Mounting...`)
+  //console.log(`agencyDetails router.query.id: ${router.query.id}`)
+  //console.log(`agencyDetails router.query.spaceCraftId: ${router.query.spaceCraftId}`)
 
   useEffect(()=> {
     const myFunc = async ()=> {
       try {
-        const data = await getAgency(Id)
+        console.log(`Agency; useEffect; getAgency(${agencyId})`)
+        const data = await getAgency(agencyId)
         setAgencyDetails(data)
       } 
       catch(error) {
@@ -32,16 +36,21 @@ export default function Agency() {
       }
     }
     myFunc()
-  }, [Id])
+  }, [agencyId])
 
   return <>
     <NavBar />
     { !agencyDetails?
-      <LoadingCircle />
+      <div>
+        {console.log(`Agency; showing spinner`)}
+        <LoadingCircle />
+      </div>
       :
+      <div>
+      {console.log(`Agency; showing content`)}
       <Container sx={{paddingTop:2}}>
         <Grid container>
-          <Grid item xs="2">
+          <Grid item xs={2}>
             <img
                 alt={agencyDetails.name}
                 src={agencyDetails.logo_url}
@@ -50,12 +59,12 @@ export default function Agency() {
                 }}
             />
           </Grid>
-          <Grid item xs="10">
+          <Grid item xs={10}>
             <Typography variant="h3" gutterBottom>
               {`${agencyDetails.name} (${agencyDetails.abbrev})`}
             </Typography>
           </Grid>
-          <Grid item xs="4">
+          <Grid item xs={4}>
             <Typography variant="h5">
                 {`Launch Details`}
             </Typography>
@@ -72,7 +81,7 @@ export default function Agency() {
                 description={`${agencyDetails.successful_landings}`}
             />
           </Grid>
-          <Grid item xs="4">
+          <Grid item xs={4}>
               <Typography variant="h5">
                   {`Agency Information`}
               </Typography>
@@ -86,24 +95,27 @@ export default function Agency() {
                   subDescription={agencyDetails.description}
               />
           </Grid>
-          <Grid item xs="4">
+          <Grid item xs={4}>
             <Typography variant="h5">
                 {`SpaceCraft`}
             </Typography>
             { agencyDetails.spacecraft_list && agencyDetails.spacecraft_list.map((spaceCraft)=> {
-                return <SimpleDetailsCard 
-                    key={spaceCraft.id}
-                    description={`${spaceCraft.name}`}
-                    buttonCallback={()=> {
-                      console.log(`router.push spaceCraft.id: ${spaceCraft.id}`)
-                      router.push(`/spacecraft/${spaceCraft.id}`)  
-                    }}
-                    buttonName="Go to SpaceCraft"
-                />
+              return (
+              <SimpleDetailsCard 
+                key={spaceCraft.id}
+                description={`${spaceCraft.name}`}
+                buttonCallback={()=> {
+                  console.log(`router.push(/spacecraft/${spaceCraft.id}`)
+                  router.push(`/spacecraft/${spaceCraft.id}`)  
+                }}
+                buttonName="Go to SpaceCraft"
+              />
+              )
             })}
           </Grid>
         </Grid>
       </Container>
+      </div>
     }
   </>
 }

@@ -13,15 +13,22 @@ export default function SpaceCraft() {
   const [spaceCraftDetails, setSpaceCraftDetails] = useState()
 
   const router = useRouter()
-  console.log(`spaceCraftDetails router.query: ${router.query.spaceCraftId}`)
-  //const { spaceCraftId } = router.query
+  
   const spaceCraftId = router.query.spaceCraftId
   
+  console.log(`SpaceCraft Mounting...`)
+
   useEffect(()=> {
     const myFunc = async ()=> {
       try {
-        const data = await getSpaceCraft(spaceCraftId)
-        setSpaceCraftDetails(data)
+        if(spaceCraftId == 17){
+          console.log(`SpaceCraft; useEffect; spaceCraftId= ${spaceCraftId}`)
+        } else {
+          console.log(`SpaceCraft; useEffect; getSpaceCraft(${spaceCraftId})`)
+          const data = await getSpaceCraft(spaceCraftId)
+          setSpaceCraftDetails(data)
+        }
+        
       } 
       catch(error) {
         console.error(`useEffect catch on getSpaceCraft: ${error.message}`)
@@ -30,32 +37,38 @@ export default function SpaceCraft() {
     myFunc()
   }, [spaceCraftId])
 
-  return  <>
+  return  <>      
   <NavBar />
   {!spaceCraftDetails ? 
+    <div>
+    {console.log(`SpaceCraft; showing spinner as spaceCraftDetails= ${spaceCraftDetails}`)}
     <LoadingCircle />
+    </div>
     :
-    <Container sx={{paddingTop:2}}>
-      <Grid container>
-        <Grid xs="12" item>
-          <Typography variant="h3" gutterBottom>
-              {spaceCraftDetails.name}
-          </Typography>
+    <div>
+      {console.log(`SpaceCraft; showing content`)}
+      <Container sx={{paddingTop:2}}>
+        <Grid container>
+          <Grid item xs={12}>
+            <Typography variant="h3" gutterBottom>
+                {spaceCraftDetails.name}
+            </Typography>
+          </Grid>
+          <Grid item xs={4}>
+            <SimpleDetailsCard 
+              title={`${spaceCraftDetails.name} history`}
+              subDescription={spaceCraftDetails.history}
+            />
+          </Grid>
+          <Grid item xs={4}>
+            <SimpleDetailsCard 
+              title={`${spaceCraftDetails.name} details`}
+              subDescription={spaceCraftDetails.details}
+            />
+          </Grid>
         </Grid>
-        <Grid item xs="4">
-          <SimpleDetailsCard 
-            title={`${spaceCraftDetails.name} history`}
-            subDescription={spaceCraftDetails.history}
-          />
-        </Grid>
-        <Grid item xs="4">
-          <SimpleDetailsCard 
-            title={`${spaceCraftDetails.name} details`}
-            subDescription={spaceCraftDetails.details}
-          />
-        </Grid>
-      </Grid>
-    </Container>
+      </Container>
+    </div>
   }
   </>
 }
