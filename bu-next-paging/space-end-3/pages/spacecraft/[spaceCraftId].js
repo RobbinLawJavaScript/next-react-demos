@@ -15,23 +15,35 @@ export default function SpaceCraft() {
   const router = useRouter()
   
   const spaceCraftId = router.query.spaceCraftId
-  
-  console.log(`SpaceCraft Mounting...`)
 
   useEffect(()=> {
     const myFunc = async ()=> {
       try {
-        if(spaceCraftId == 17){
+        console.log(`SpaceCraft; useEffect; Mounting...`)
+        return () => {
+          console.log("SpaceCraft; useEffect; UNMounting...")
+        }
+      } 
+      catch(error) {
+        console.log(`SpaceCraft; useEffect catch  ${error.message}`)
+      }
+    }
+    myFunc()
+  }, [])
+
+  useEffect(()=> {
+    const myFunc = async ()=> {
+      try {
+        if(spaceCraftId == undefined){
           console.log(`SpaceCraft; useEffect; spaceCraftId= ${spaceCraftId}`)
         } else {
           console.log(`SpaceCraft; useEffect; getSpaceCraft(${spaceCraftId})`)
           const data = await getSpaceCraft(spaceCraftId)
           setSpaceCraftDetails(data)
         }
-        
       } 
       catch(error) {
-        console.error(`useEffect catch on getSpaceCraft: ${error.message}`)
+        console.error(`SpaceCraft; useEffect; catch ${error.message}`)
       }
     }
     myFunc()

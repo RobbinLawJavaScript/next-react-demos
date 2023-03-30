@@ -13,9 +13,6 @@ import { getAgencies } from 'api/agencies'
 
 export default function Home() {
   const [agenciesData, setAgenciesData] = useState()
-  
-  //console.clear()
-  console.log(`Home Mounting...`)
 
   useEffect(()=> {
     const myFunc = async ()=> {
@@ -23,6 +20,9 @@ export default function Home() {
         console.log(`Home; useEffect on mount; getAgencies()`)
         const data = await getAgencies()
         setAgenciesData(data.results)
+        return () => {
+          console.log("Home UNMounting...")
+        }
       } 
       catch(error) {
         console.log(`useEffect catch on getSpaceCraft: ${error.message}`)

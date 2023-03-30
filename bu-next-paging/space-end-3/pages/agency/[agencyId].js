@@ -20,19 +20,34 @@ export default function Agency() {
   
   const agencyId = router.query.agencyId
 
-  console.log(`Agency Mounting...`)
-  //console.log(`agencyDetails router.query.id: ${router.query.id}`)
-  //console.log(`agencyDetails router.query.spaceCraftId: ${router.query.spaceCraftId}`)
+  useEffect(()=> {
+    const myFunc = async ()=> {
+      try {
+        console.log(`Agency; useEffect; Mounting...`)
+        return () => {
+          console.log("Agency; useEffect; UNMounting...")
+        }
+      } 
+      catch(error) {
+        console.log(`Agency; useEffect; catch ${error.message}`)
+      }
+    }
+    myFunc()
+  }, [])
 
   useEffect(()=> {
     const myFunc = async ()=> {
       try {
+        if(agencyId == undefined){
+          console.log(`Agency; useEffect; agencyId= ${agencyId}`)
+        } else {
         console.log(`Agency; useEffect; getAgency(${agencyId})`)
         const data = await getAgency(agencyId)
         setAgencyDetails(data)
+        }
       } 
       catch(error) {
-        console.log(`useEffect catch on getAgency: ${error.message}`)
+        console.log(`Agency; useEffect; catch ${error.message}`)
       }
     }
     myFunc()
@@ -42,7 +57,7 @@ export default function Agency() {
     <NavBar />
     { !agencyDetails?
       <div>
-        {console.log(`Agency; showing spinner`)}
+        {console.log(`Home; showing spinner as agencyDetails= ${agencyDetails}`)}
         <LoadingCircle />
       </div>
       :
