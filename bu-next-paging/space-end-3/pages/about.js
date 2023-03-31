@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import { useEffect, useState } from 'react'
 
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
@@ -7,6 +8,22 @@ import Box from '@mui/material/Box';
 import NavBar from '@components/NavBar';
 
 export default function Home() {
+  console.log(`about Home; mounting...`)
+
+  useEffect(()=> {
+    const myFunc = async ()=> {
+      try {
+        console.log(`about Home; useEffect on mount; try;`)
+        return () => {
+          console.log("about Home; useEffect on unMount; try;")
+        }
+      } 
+      catch(error) {
+        console.log(`about Home; useEffect on mount; catch; ${error.message}`)
+      }
+    }
+    myFunc()
+  }, [])
   
   return (
     <div>

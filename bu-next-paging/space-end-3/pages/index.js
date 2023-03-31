@@ -12,20 +12,21 @@ import NavBar from '@components/NavBar'
 import { getAgencies } from 'api/agencies'
 
 export default function Home() {
+  console.log(`index Home; mounting...`)
   const [agenciesData, setAgenciesData] = useState()
 
   useEffect(()=> {
     const myFunc = async ()=> {
       try {
-        console.log(`Home; useEffect on mount; getAgencies()`)
+        console.log(`index Home; useEffect on mount; try; getAgencies()`)
         const data = await getAgencies()
         setAgenciesData(data.results)
         return () => {
-          console.log("Home UNMounting...")
+          console.log("index Home; useEffect on unMount; try;")
         }
       } 
       catch(error) {
-        console.log(`useEffect catch on getSpaceCraft: ${error.message}`)
+        console.log(`index Home; useEffect on mount; catch; ${error.message}`)
       }
     }
     myFunc()
@@ -41,12 +42,12 @@ export default function Home() {
         <NavBar />
         { !agenciesData?
           <div>
-            {console.log(`Home; showing spinner as agenciesData= ${agenciesData}`)}
+            {console.log(`index Home; showing spinner as agenciesData= ${agenciesData}`)}
             <LoadingCircle />
           </div>
           :
           <div>
-            {console.log(`Home; showing content`)}
+            {console.log(`index Home; showing content`)}
           <Container sx={{paddingTop:2}} component="main" maxWidth="xs">
             <Typography variant="h3">
               Space Agencies

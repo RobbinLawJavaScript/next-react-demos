@@ -10,6 +10,7 @@ import LoadingCircle from '@components/LoadingCircle'
 import { getSpaceCraft } from '@api/spaceCraft';
 
 export default function SpaceCraft() {
+  console.log(`SpaceCraft; mounting...`)
   const [spaceCraftDetails, setSpaceCraftDetails] = useState()
 
   const router = useRouter()
@@ -19,13 +20,13 @@ export default function SpaceCraft() {
   useEffect(()=> {
     const myFunc = async ()=> {
       try {
-        console.log(`SpaceCraft; useEffect; Mounting...`)
+        console.log(`SpaceCraft; useEffect on mount; try;`)
         return () => {
-          console.log("SpaceCraft; useEffect; UNMounting...")
+          console.log(`SpaceCraft; useEffect on unMounting; try;`)
         }
       } 
       catch(error) {
-        console.log(`SpaceCraft; useEffect catch  ${error.message}`)
+        console.log(`SpaceCraft; useEffect on mount; catch; ${error.message}`)
       }
     }
     myFunc()
@@ -35,15 +36,15 @@ export default function SpaceCraft() {
     const myFunc = async ()=> {
       try {
         if(spaceCraftId == undefined){
-          console.log(`SpaceCraft; useEffect; spaceCraftId= ${spaceCraftId}`)
+          console.log(`SpaceCraft; useEffect on spaceCraftId; spaceCraftId= ${spaceCraftId}`)
         } else {
-          console.log(`SpaceCraft; useEffect; getSpaceCraft(${spaceCraftId})`)
+          console.log(`SpaceCraft; useEffect on spaceCraftId; getSpaceCraft(${spaceCraftId})`)
           const data = await getSpaceCraft(spaceCraftId)
           setSpaceCraftDetails(data)
         }
       } 
       catch(error) {
-        console.error(`SpaceCraft; useEffect; catch ${error.message}`)
+        console.error(`SpaceCraft; useEffect on spaceCraftId; catch ${error.message}`)
       }
     }
     myFunc()

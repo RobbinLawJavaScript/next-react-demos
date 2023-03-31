@@ -13,6 +13,7 @@ import Typography from '@mui/material/Typography'
 import { useRouter } from 'next/router'
 
 export default function AgenciesCard(props) {
+  console.log(`AgenciesCard; mounting...`)
   const router = useRouter()
 
   const navigateToAgencyPage = () => {

@@ -14,6 +14,7 @@ import LoadingCircle from '@components/LoadingCircle'
 import {getAgency} from '@api/agencies'
 
 export default function Agency() {
+  console.log(`Agency; mounting...`)
   const [agencyDetails, setAgencyDetails] = useState()
   
   const router = useRouter()
@@ -23,13 +24,13 @@ export default function Agency() {
   useEffect(()=> {
     const myFunc = async ()=> {
       try {
-        console.log(`Agency; useEffect; Mounting...`)
+        console.log(`Agency; useEffect on mount; try;`)
         return () => {
-          console.log("Agency; useEffect; UNMounting...")
+          console.log("Agency; useEffect on unMount; try;")
         }
       } 
       catch(error) {
-        console.log(`Agency; useEffect; catch ${error.message}`)
+        console.log(`Agency; useEffect on mount; catch; ${error.message}`)
       }
     }
     myFunc()
@@ -39,15 +40,15 @@ export default function Agency() {
     const myFunc = async ()=> {
       try {
         if(agencyId == undefined){
-          console.log(`Agency; useEffect; agencyId= ${agencyId}`)
+          console.log(`Agency; useEffect on agencyId; try; agencyId= ${agencyId}`)
         } else {
-        console.log(`Agency; useEffect; getAgency(${agencyId})`)
+        console.log(`Agency; useEffect on agencyId; try; getAgency(${agencyId})`)
         const data = await getAgency(agencyId)
         setAgencyDetails(data)
         }
       } 
       catch(error) {
-        console.log(`Agency; useEffect; catch ${error.message}`)
+        console.log(`Agency; useEffect on agencyId; catch; ${error.message}`)
       }
     }
     myFunc()
@@ -57,7 +58,7 @@ export default function Agency() {
     <NavBar />
     { !agencyDetails?
       <div>
-        {console.log(`Home; showing spinner as agencyDetails= ${agencyDetails}`)}
+        {console.log(`Agency; showing spinner as agencyDetails= ${agencyDetails}`)}
         <LoadingCircle />
       </div>
       :
@@ -120,7 +121,7 @@ export default function Agency() {
                 key={spaceCraft.id}
                 description={`${spaceCraft.name}`}
                 buttonCallback={()=> {
-                  console.log(`router.push(/spacecraft/${spaceCraft.id}`)
+                  console.log(`Agency; SimpleDetailsCard; buttonCallback prop; router.push(/spacecraft/${spaceCraft.id})`)
                   router.push(`/spacecraft/${spaceCraft.id}`)  
                 }}
                 buttonName="Go to SpaceCraft"
