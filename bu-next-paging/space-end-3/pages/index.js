@@ -16,21 +16,22 @@ export default function Home() {
   const [agenciesData, setAgenciesData] = useState()
 
   useEffect(()=> {
-    const myFunc = async ()=> {
-      try {
-        console.log(`index Home; useEffect on mount; try; getAgencies()`)
-        const data = await getAgencies()
-        setAgenciesData(data.results)
-        return () => {
-          console.log("index Home; useEffect on unMount; try;")
-        }
-      } 
-      catch(error) {
-        console.log(`index Home; useEffect on mount; catch; ${error.message}`)
-      }
+    console.log(`index Home; useEffect on mount; getAgencies()`)
+    asyncGetAgencies()
+    return () => {
+      console.log(`index Home; useEffect on unMount;`)
     }
-    myFunc()
   }, [])
+
+  const asyncGetAgencies = async () => {
+    try {
+      const data = await getAgencies()
+      setAgenciesData(data.results)
+    } 
+    catch(error) {
+      console.log(`index Home; useEffect on mount; catch: ${error.message}`)
+    }
+  }
 
   return (
     <div>
@@ -48,32 +49,32 @@ export default function Home() {
           :
           <div>
             {console.log(`index Home; showing content`)}
-          <Container sx={{paddingTop:2}} component="main" maxWidth="xs">
-            <Typography variant="h3">
-              Space Agencies
-            </Typography>
-            <Box
-              sx={{
-                marginTop: 2,
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-              }}
-            >
-              {agenciesData.map((agency)=> {
-                return (
-                <AgenciesCard
-                  key={agency.id}
-                  agencyId={agency.id}
-                  imageUrl={agency.image_url}
-                  name={agency.name}
-                  abbreviation={agency.abbrev}
-                  description={agency.description}
-                />
-                )
-              })}
-            </Box>
-          </Container>
+            <Container sx={{paddingTop:2}} component="main" maxWidth="xs">
+              <Typography variant="h3">
+                Space Agencies
+              </Typography>
+              <Box
+                sx={{
+                  marginTop: 2,
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center',
+                }}
+              >
+                {agenciesData.map((agency)=> {
+                  return (
+                  <AgenciesCard
+                    key={agency.id}
+                    agencyId={agency.id}
+                    imageUrl={agency.image_url}
+                    name={agency.name}
+                    abbreviation={agency.abbrev}
+                    description={agency.description}
+                  />
+                  )
+                })}
+              </Box>
+            </Container>
           </div>
         }
     </div>

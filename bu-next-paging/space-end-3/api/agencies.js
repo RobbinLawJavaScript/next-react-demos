@@ -10,7 +10,8 @@ export const getAgencies = async () => {
 		return data
 	} 
 	catch (error) {
-	  console.error (`Error of: ${error.message}`)
+	  console.error (`Error in getAgencies() fetch: ${error.message}`)
+		throw(error)
 	} 
 }
 
@@ -24,6 +25,7 @@ export const getAgency = async (id) => {
 	  return data
 	} 
 	catch (error) {
-	  console.error (`Error of: ${error.message}`)
+	  console.error (`Error in getAgency(id) fetch: ${error.message}`)
+		throw(error)
 	} 
 }
