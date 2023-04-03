@@ -1,3 +1,5 @@
+import {useState, useEffect} from 'react'
+
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
@@ -6,6 +8,15 @@ import Typography from '@mui/material/Typography';
 
 
 export default function SimpleDetailsCard(props) {
+  console.log(`SimpleDetailsCard; mounting...`)
+
+  useEffect(()=> {
+    console.log(`SimpleDetailsCard; useEffect on mount`)
+    return () => {
+      console.log(`SimpleDetailsCard; useEffect on unMount`)
+    }
+  }, [])
+
   return (
   <Card sx={{ minWidth: 200, margin: 2 }}>
     <CardContent>

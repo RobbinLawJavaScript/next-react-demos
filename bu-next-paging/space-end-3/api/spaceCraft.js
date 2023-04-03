@@ -11,5 +11,6 @@ export const getSpaceCraft = async (id) => {
 	} 
 	catch (error) {
 	  console.error (`Error in getSpaceCraft(id) fetch: ${error.message}`)
+		throw(error)
 	} 
 }

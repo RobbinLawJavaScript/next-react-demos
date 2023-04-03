@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
+
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
@@ -7,7 +8,7 @@ import Grid from '@mui/material/Grid';
 import NavBar from '@components/NavBar';
 import SimpleDetailsCard from '@components/SimpleDetailsCard';
 import LoadingCircle from '@components/LoadingCircle'
-import { getSpaceCraft } from '@api/spaceCraft';
+import {getSpaceCraft} from '@api/spaceCraft';
 
 export default function SpaceCraft() {
   console.log(`SpaceCraft; mounting...`)
@@ -18,37 +19,33 @@ export default function SpaceCraft() {
   const spaceCraftId = router.query.spaceCraftId
 
   useEffect(()=> {
-    const myFunc = async ()=> {
-      try {
-        console.log(`SpaceCraft; useEffect on mount; try;`)
-        return () => {
-          console.log(`SpaceCraft; useEffect on unMounting; try;`)
-        }
-      } 
-      catch(error) {
-        console.log(`SpaceCraft; useEffect on mount; catch; ${error.message}`)
-      }
+    console.log(`SpaceCraft; useEffect on mount;`)
+    return () => {
+      console.log(`SpaceCraft; useEffect on unMounting;`)
     }
-    myFunc()
   }, [])
 
   useEffect(()=> {
-    const myFunc = async ()=> {
-      try {
-        if(spaceCraftId == undefined){
-          console.log(`SpaceCraft; useEffect on spaceCraftId; spaceCraftId= ${spaceCraftId}`)
-        } else {
-          console.log(`SpaceCraft; useEffect on spaceCraftId; getSpaceCraft(${spaceCraftId})`)
-          const data = await getSpaceCraft(spaceCraftId)
-          setSpaceCraftDetails(data)
-        }
-      } 
-      catch(error) {
-        console.error(`SpaceCraft; useEffect on spaceCraftId; catch ${error.message}`)
-      }
-    }
-    myFunc()
+    console.log(`SpaceCraft; useEffect on spaceCraftId; begin spaceCraftId= ${spaceCraftId}`)
+    asyncGetSpaceCraft()
+    console.log(`SpaceCraft; useEffect on spaceCraftId; end spaceCraftId= ${spaceCraftId}`)
   }, [spaceCraftId])
+
+  const asyncGetSpaceCraft = async ()=> {
+    try {
+      if(spaceCraftId == undefined){
+        console.log(`SpaceCraft; asyncGetSpaceCraft; begin spaceCraftId= ${spaceCraftId}`)
+      } else {
+        console.log(`SpaceCraft; asyncGetSpaceCraft; begin getSpaceCraft(${spaceCraftId})`)
+        const data = await getSpaceCraft(spaceCraftId)
+        setSpaceCraftDetails(data)
+        console.log(`SpaceCraft; asyncGetSpaceCraft; end`)
+      }
+    } 
+    catch(error) {
+      console.error(`SpaceCraft; asyncGetSpaceCraft; catch ${error.message}`)
+    }
+  }
 
   return  <>      
   <NavBar />

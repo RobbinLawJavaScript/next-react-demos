@@ -2,6 +2,8 @@
 https://mui.com/material-ui/react-card/#media
 
 */
+import {useState, useEffect} from 'react'
+import {useRouter} from 'next/router'
 
 import Card from '@mui/material/Card'
 import CardActions from '@mui/material/CardActions'
@@ -10,11 +12,16 @@ import CardMedia from '@mui/material/CardMedia'
 import Button from '@mui/material/Button'
 import Typography from '@mui/material/Typography'
 
-import { useRouter } from 'next/router'
-
 export default function AgenciesCard(props) {
   console.log(`AgenciesCard; mounting...`)
   const router = useRouter()
+
+  useEffect(()=> {
+    console.log(`AgenciesCard; useEffect on mount`)
+    return () => {
+      console.log(`AgenciesCard; useEffect on unMount`)
+    }
+  }, [])
 
   const navigateToAgencyPage = () => {
     console.log(`AgenciesCard; router.push(/agency/${props.agencyId})`)

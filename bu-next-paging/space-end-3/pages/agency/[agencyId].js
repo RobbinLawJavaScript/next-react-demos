@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import {useState, useEffect} from 'react'
-import { useRouter } from 'next/router'
+import {useRouter} from 'next/router'
 
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
@@ -9,7 +9,6 @@ import Grid from '@mui/material/Grid';
 import NavBar from '@components/NavBar';
 import SimpleDetailsCard from '@components/SimpleDetailsCard'
 import LoadingCircle from '@components/LoadingCircle'
-
 
 import {getAgency} from '@api/agencies'
 
@@ -22,37 +21,33 @@ export default function Agency() {
   const agencyId = router.query.agencyId
 
   useEffect(()=> {
-    const myFunc = async ()=> {
-      try {
-        console.log(`Agency; useEffect on mount; try;`)
-        return () => {
-          console.log("Agency; useEffect on unMount; try;")
-        }
-      } 
-      catch(error) {
-        console.log(`Agency; useEffect on mount; catch; ${error.message}`)
-      }
+    console.log(`Agency; useEffect on mount;`)
+    return () => {
+      console.log(`Agency; useEffect on unMount; try`)
     }
-    myFunc()
   }, [])
 
   useEffect(()=> {
-    const myFunc = async ()=> {
-      try {
-        if(agencyId == undefined){
-          console.log(`Agency; useEffect on agencyId; try; agencyId= ${agencyId}`)
-        } else {
-        console.log(`Agency; useEffect on agencyId; try; getAgency(${agencyId})`)
-        const data = await getAgency(agencyId)
-        setAgencyDetails(data)
-        }
-      } 
-      catch(error) {
-        console.log(`Agency; useEffect on agencyId; catch; ${error.message}`)
-      }
-    }
-    myFunc()
+    console.log(`Agency; useEffect on agencyId; begin agencyId= ${agencyId}`)
+    asyncGetAgency()
+    console.log(`Agency; useEffect on agencyId; end agencyId= ${agencyId}`)
   }, [agencyId])
+
+  const asyncGetAgency = async ()=> {
+    try {
+      if(agencyId == undefined){
+        console.log(`Agency; asyncGetAgency; try; begin agencyId= ${agencyId}`)
+      } else {
+      console.log(`Agency; asyncGetAgency; try; begin getAgency(${agencyId})`)
+      const data = await getAgency(agencyId)
+      setAgencyDetails(data)
+      console.log(`Agency; asyncGetAgency; end`)
+      }
+    } 
+    catch(error) {
+      console.log(`Agency; asyncGetAgency; catch; ${error.message}`)
+    }
+  }
 
   return <>
     <NavBar />
@@ -76,7 +71,7 @@ export default function Agency() {
             />
           </Grid>
           <Grid item xs={10}>
-            <Typography variant="h3" gutterBottom>
+            <Typography variant="h5" gutterBottom>
               {`${agencyDetails.name} (${agencyDetails.abbrev})`}
             </Typography>
           </Grid>
