@@ -1,9 +1,5 @@
-/*
-Docs for this loading circle.
+// https://mui.com/material-ui/react-progress/#circular
 
-https://mui.com/material-ui/react-progress/#circular
-
-*/
 import {useState, useEffect} from 'react'
 
 import CircularProgress from '@mui/material/CircularProgress';
