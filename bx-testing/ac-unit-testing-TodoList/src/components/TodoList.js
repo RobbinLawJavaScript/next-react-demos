@@ -30,9 +30,9 @@ export default function TodoList () {
     setTodoText("")
   }
 
-  return  <Box sx={{ flexGrow: 1 }}>
+  return  (
+  <Box sx={{ flexGrow: 1 }}>
     <Grid container spacing={2}>
-      
       <Grid item xs={12}>
         <Typography variant="h2" component="h2">
           Our Todo List
@@ -55,8 +55,6 @@ export default function TodoList () {
           onClick={onAddTodoClick}
         >Add Todo</Button>
       </Grid>
-
-
       <List
         data-testid='todo-item-list'
         sx={{width: `100%`}}
@@ -71,8 +69,7 @@ export default function TodoList () {
           </ListItem>
         })}
       </List>
-
     </Grid>
-
   </Box>
+  )
 }
