@@ -18,7 +18,7 @@ npm install msw isomorphic-fetch --save-dev
 - at the base of your project create a file named `jest.config.js` and add contents to it as per docs.
 - in the `package.json` file add an entry in the scripts named `test` to run `jest`.
 - create a folder in the root folder of the application named `tests` and create a new file in that folder named `Home.test.js`.
-- in the file import all required.
+- in the file import all required parts.
 - setup your server so that it begins to listen to `beforeAll` of the tests and closes `afterAll` of the tests are done.
 - add some tests as per the docs.
 - run the tests
