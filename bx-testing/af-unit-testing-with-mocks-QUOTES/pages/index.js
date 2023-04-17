@@ -13,7 +13,7 @@ import Container from '@mui/material/Container';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 
-import { getRandomQuote } from '../utils/api/quotes.js'  
+import { getRandomQuote } from '../api/network.js'  
 
 export default function Home() {
   const DEFAULT_QUOTE = "Quote here"
@@ -37,13 +37,19 @@ export default function Home() {
     }
   }, [quoteData])
 
-  const changeQuote = () => {
-    getRandomQuote().then((data)=> {
-        setQuoteData({
-          quote: data.content,
-          author: data.author
-        })
+  const changeQuote = async () => {
+    console.log(`changeQuote try begin`)
+    try {
+      const data = await getRandomQuote()
+      setQuoteData({
+        quote: data.content,
+        author: data.author
       })
+      console.log(`changeQuote try end`)
+    } 
+    catch (error) {
+      console.error (`changeQuote catch: ${error.message}`)
+    }
   }
 
   return (
