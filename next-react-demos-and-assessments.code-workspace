@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../next-react"
+		}
+	],
+	"settings": {
+		"files.autoSave": "afterDelay",
+		"editor.tabSize": 2,
+		"editor.wordWrap": "on"
+	}
+}
