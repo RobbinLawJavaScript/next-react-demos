@@ -5,6 +5,9 @@
 		},
 		{
 			"path": "../next-react"
+		},
+		{
+			"path": "../master-course"
 		}
 	],
 	"settings": {
