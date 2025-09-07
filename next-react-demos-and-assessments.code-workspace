@@ -11,12 +11,15 @@
 		},
 		{
 			"path": "../../2025-Robbin-Law"
+		},
+		{
+			"path": "../../../CPSC1520/repos/javascript-demos"
 		}
 	],
 	"settings": {
 		"files.autoSave": "afterDelay",
 		"editor.tabSize": 2,
 		"editor.wordWrap": "on",
-		"liveServer.settings.multiRootWorkspaceName": "next-react-demos"
+		"liveServer.settings.multiRootWorkspaceName": "2025-Robbin-Law"
 	}
 }
