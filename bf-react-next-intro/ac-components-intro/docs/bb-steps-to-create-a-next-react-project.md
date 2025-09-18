@@ -1,14 +1,15 @@
-# Steps to Create a Next/React Project 
-# Also Creating a Simple Component and Consuming It
+# Steps to Create a Next/React Project
+
+## Also Creating a Simple Component and Consuming It
 
 - Right mouse click on the directory where you want to place the new project and choose:
   - `Open In Integrated Terminal`.
 - Create and Run a templated Next.js Project
-  - In the integrated terminal session create the project by running the following in the terminal command line (assuming that the newly created project folder is to be called `src`):
-  - `npx create-next-app@latest src`
+  - In the integrated terminal session create the project by running the following in the terminal command line (assuming that the newly created project folder is to be called `src-1`):
+  - `npx create-next-app@latest src-1`
   - Answer NO or NONE to all questions, and leave the import alias as default.
   - Go in to the new project folder (ex. src):
-  - `cd src`
+  - `cd src-1`
   - Install the material library with the following:
   - `npm install @mui/material @emotion/react @emotion/styled`
   - Run the project:

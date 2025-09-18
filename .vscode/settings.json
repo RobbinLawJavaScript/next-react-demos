@@ -1,4 +1,7 @@
 {
-	"cSpell.words": ["bgcolor"],
+	"cSpell.words": [
+		"bgcolor",
+		"reactjs"
+	],
 	"cSpell.ignoreWords": ["DMIT", "Moodle", "labelledby"]
 }
