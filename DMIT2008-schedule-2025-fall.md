@@ -3,15 +3,15 @@
 ## Links
 
 - [Link to Robbin Law's Github Demos Repo](https://github.com/RobbinLawJavaScript/next-react-demos)
-- [DMIT 2008 Student Website](https://dmit-2008.github.io/dmit2008/)
+- [DMIT 2008 Student Website by Daniel Mouris](https://dmit-2008.github.io/dmit2008/)
 
 ---
 
 ### Assignments
 
-| Assessment | Submit via | Due 11:59 PM Friday | Mark %|
+| Assessment | Submit via | Due 11:59 PM | Mark %|
 |---|---|---|---|
-| Assignment 1 | github | week 4  | 20 |
+| Assignment 1 | github | week 4 Sunday Sept28 | 20 |
 | Review Quiz | Brightspace | week 5  | 15 |
 | Assignment 2 | github | week 6  | 20 |
 | Assignment 3 | github | week 8  | 10 |

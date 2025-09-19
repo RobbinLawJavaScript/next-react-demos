@@ -1,0 +1,23 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model Item {
+  id            Int      @id @default(autoincrement())
+  name          String
+  category      String
+  rating        String
+  savedItems SavedItem[] // this is referencing the SavedItem table
+}
+
+model SavedItem {
+  id        Int     @id @default(autoincrement())
+  itemId     Int     // Foreign key referencing the ID of the Item model
+  item       Item     @relation(fields: [itemId], references: [id]) // Define the relationship with the Item model
+  createdAt DateTime @default(now()) // Optional: Include a createdAt timestamp
+}

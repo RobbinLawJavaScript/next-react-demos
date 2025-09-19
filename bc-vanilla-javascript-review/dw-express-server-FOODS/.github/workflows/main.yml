@@ -1,0 +1,33 @@
+name: Assignment 1 End to End testing with Cypress
+
+on: push
+
+jobs:
+  test:
+    runs-on: ubuntu-22.04
+    strategy:
+      matrix:
+        node: [ 18 ]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node }}
+      - name: Install NPM dependencies
+        run: npm install
+        working-directory: frontend
+      - name: Build the project
+        run: npm run build
+        working-directory: frontend
+      # Install NPM dependencies, cache them correctly
+      # and run all Cypress tests
+      - name: Cypress run
+        uses: cypress-io/github-action@v5
+        with:
+          start: npm run start
+          working-directory: automated-tests-do-not-touch
+          browser: chrome
+          wait-on: 'http://localhost:8080'
+          wait-on-timeout: 30

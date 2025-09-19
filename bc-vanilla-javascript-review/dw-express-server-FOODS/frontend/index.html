@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <title>Demo: express-server</title>
+  <link rel="icon" href="./img/favicon.png"  type="image/png">
+  <script type="module" src="js/main.js" defer></script>
+</head>
+<body class=" h-100  text-white bg-light">
+  <header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand mx-5" href="#">
+          <img src="./img/favicon.png" alt="Logo" width="24" height="24" class="d-inline-block align-text-top">
+          Demo: express-server | sqlite | prisma
+        </a>
+      </div>
+    </nav>
+  </header>
+  <main class="pt-3 mx-auto">
+    <div class="container">
+      <ul id="tab-navigation" class="nav nav-tabs">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Search Foods</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Favorite Foods</a>
+        </li>
+      </ul>
+    </div>
+    <div id="searched-tab" class="container album py-5 bg-body-tertiary">
+      <form id="form">
+        <div class="row">
+          <div class="col-lg-7 mb-1">
+            <input
+              name="query"
+              type="text"
+              class="form-control"
+              placeholder="Search"
+              id="query-input"
+            >
+          </div>
+          <div class="col-lg-2 mb-3">
+            <button type="submit" class="btn btn-dark w-100">Search</button>
+          </div>
+        </div>
+      </form>
+      <div class="col-lg-9 mb-1">
+        <ul id="searched-list" class="list-group "> 
+        </ul>
+      </div>
+    </div>
+    <div id="favorites-tab" class="d-none container album py-5 bg-body-tertiary">
+      <div class="col-lg-9 mb-1">
+        <ul id="favorites-list" class="list-group">
+        </ul>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
