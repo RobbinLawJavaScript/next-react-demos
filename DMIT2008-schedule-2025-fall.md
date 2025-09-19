@@ -35,7 +35,7 @@
 |6-Oct06|State (useState)|WP A2|A2|
 |7-Oct13|REST API's|REST API's||
 |8-Oct20|REST API's|WP A3|A3|
-|9-Oct27|Component Lifecycle (useEffect)|Component Lifecycle (useEffect)|
+|9-Oct27|Component Lifecycle (useEffect)|Component Lifecycle (useEffect)||
 |10-Nov03|Component Lifecycle (useEffect)|WP A4a|A4a|
 |11-Nov10|Routing (useRouter)|Routing (useRouter)||
 |12-Nov17|Routing (useRouter)|EASTER||
