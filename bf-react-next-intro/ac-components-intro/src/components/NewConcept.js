@@ -1,5 +1,5 @@
 // Props are essentially how you can pass data into a component,
-// from the parent that uses that component.
+// from the parent that uses/consumes that component.
 
 // All of the props/attributes are wrapped up into the so called props object.
 // We could call the parm anything like "jim" but then to access

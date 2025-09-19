@@ -28,7 +28,7 @@
 ```
 
 - Observe the differences on the page as you make these changes.
-- In the `src` project folder create a new folder named `components`.
+- In the `src-1` project folder create a new folder named `components`.
 - In the `components` folder create a file named `Hello.js`
   - create a function named `Hello` with `export default` before the function keyword.
   - in that function just return some html in it.

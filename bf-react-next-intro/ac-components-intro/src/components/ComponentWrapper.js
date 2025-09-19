@@ -1,5 +1,6 @@
 // Here we destructure "props" again but this time
-// we use "children" which is a very special prop.
+// we use "children" which is a very special prop,
+// its like a reserved word.
 // It contains all the children elements wrapped by the 
 // ComponentWrapper component.
 

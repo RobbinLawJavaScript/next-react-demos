@@ -27,6 +27,7 @@ export default function Home() {
         <Hello2 />
         <Hello3 />
         <NewConcept1 concept={"how to import components"} textColor={"green"} />
+        <NewConcept1 concept={"how to import components"} textColor={"blue"} />
         <NewConcept2 concept={"how to use props in a component"} textColor={"purple"} />
         <ComponentWrapper textColor={"blue"}>
           <h4>Just a random h4</h4>
