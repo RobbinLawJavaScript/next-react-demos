@@ -2,8 +2,11 @@
 
 ## Links
 
-- [Link to Robbin Law's Github Demos Repo](https://github.com/RobbinLawJavaScript/next-react-demos)
+- [Link to Robbin Law's Github Next/React Demos Repo](https://github.com/RobbinLawJavaScript/next-react-demos)
 - [DMIT 2008 Student Website by Daniel Mouris](https://dmit-2008.github.io/dmit2008/)
+- [Link to Robbin Law's Github JavaScript Demos repo](https://github.com/RobbinLawJavaScript/javascript-demos.git)
+- [CPSC 1520 Student Website by Daniel Mouris](https://cpsc-1520.github.io/cpsc1520/)
+
 
 ---
 
