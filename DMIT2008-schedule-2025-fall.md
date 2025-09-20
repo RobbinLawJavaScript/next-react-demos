@@ -8,7 +8,6 @@
 - [Link to Robbin Law's Github JavaScript Demos repo](https://github.com/RobbinLawJavaScript/javascript-demos.git)
 - [CPSC 1520 Student Website by Daniel Mouris](https://cpsc-1520.github.io/cpsc1520/)
 
-
 ---
 
 ### Assignments
