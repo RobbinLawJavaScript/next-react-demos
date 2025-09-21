@@ -39,9 +39,9 @@
 |7-Oct13|REST API's|REST API's||
 |8-Oct20|REST API's|WP A3|A3|
 |9-Oct27|Component Lifecycle (useEffect)|Component Lifecycle (useEffect)||
-|10-Nov03|Component Lifecycle (useEffect)|WP A4a|A4a|
-|11-Nov10|Routing (useRouter)|Routing (useRouter)||
-|12-Nov17|Routing (useRouter)|EASTER||
-|13-Nov24|EASTER|WP A4b|A4b|
+|10-Nov03|Component Lifecycle (useEffect)| FALL BREAK ||
+|11-Nov10|REMEMBRANCE DAY|WP A4a|A4a|
+|12-Nov17|Routing (useRouter)|Routing (useRouter)||
+|13-Nov24|Routing (useRouter)|WP A4b|A4b|
 |14-Dec01|Testing|Testing||
 |15-Dec08|WP A5 & Theory|WP A5 & Theory|A5 & Theory|
