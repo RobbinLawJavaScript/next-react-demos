@@ -7,6 +7,10 @@ import styles from '@/styles/Home.module.css'
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
+import Grid from '@mui/material/Grid';
+
+import { data } from "@/foods";
+import DataTable from '@/components/DataTable';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -21,7 +25,7 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         {/* maxWidth can be xs | sm | md | lg | xl | false */}
-        <Container maxWidth="sm">
+        <Container maxWidth="lg">
           {/* my	margin-top, margin-bottom 
               By default margin is 8px so with
               my: 4 margin-top and margin-bottom
@@ -43,6 +47,11 @@ export default function Home() {
             <Typography variant="h4" component="p">
               You can perhaps see why this is a popular package.
             </Typography>  
+          </Box>
+          <Box sx={{ flexGrow: 1, margin: 5 }}>
+            <Grid item xs={12}>
+              <DataTable data={data.all_foods} />
+            </Grid>
           </Box>
         </Container>
       </main>
