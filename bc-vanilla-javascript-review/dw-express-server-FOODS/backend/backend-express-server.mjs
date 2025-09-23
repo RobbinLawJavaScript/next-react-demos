@@ -72,7 +72,7 @@ app.get('/items/:id', async (req, res) => {
   }
 })
 
-// GET endpoint to list items and search for items
+// GET endpoint to list saved-items and search for saved-items
 app.get('/saved-items', async (req, res) => {
   try {
 
@@ -98,19 +98,6 @@ app.get('/saved-items', async (req, res) => {
     res.status(500).json({ error: 'An internal server error occurred' });
   }
 });
-
-// GET endpoint to retrieve all saved items
-// app.get('/saved-items', async (req, res) => {
-//   try {
-//     // Fetch all saved item records from the database
-//     const savedItems = await prisma.savedItem.findMany();
-
-//     res.json(savedItems);
-//   } catch (error) {
-//     console.error('Error fetching saved items:', error);
-//     res.status(500).json({ error: 'An internal server error occurred' });
-//   }
-// });
 
 // GET endpoint to fetch a single saved-item by itemId
 app.get('/saved-items/:id', async (req, res) => {
