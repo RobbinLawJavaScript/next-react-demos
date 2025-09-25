@@ -1,4 +1,16 @@
 export const data = {
+  "cakes": {
+    "total": 8,
+    "last_month": 3
+  },
+  "pizzas": {
+    "total": 6,
+    "last_month": 2
+  },
+  "burgers": {
+    "total": 4,
+    "last_month": 1
+  },
   "all_foods": [
     {
       "id": 1,

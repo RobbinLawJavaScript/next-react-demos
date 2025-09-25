@@ -8,8 +8,12 @@ import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
+import Cake from '@mui/icons-material/Cake';
+import LocalPizza from '@mui/icons-material/LocalPizza';
+import LunchDining from '@mui/icons-material/LunchDining';
 
 import { data } from "@/foods";
+import DashboardCard from "@/components/DashboardCard";
 import DataTable from '@/components/DataTable';
 
 const inter = Inter({ subsets: ['latin'] })
@@ -49,8 +53,34 @@ export default function Home() {
             </Typography>  
           </Box>
           <Box sx={{ flexGrow: 1, margin: 5 }}>
-            <Grid item xs={12}>
-              <DataTable data={data.all_foods} />
+            <Grid container spacing={2}>
+              <Grid item xs={4}>
+                <DashboardCard
+                  icon={<Cake fontSize="large"/>}
+                  title="Cakes"
+                  description={data.cakes.total}
+                  subDescription={`+${data.cakes.last_month} this month`}
+                />
+              </Grid>
+              <Grid item xs={4}>
+                <DashboardCard
+                  icon={<LocalPizza fontSize="medium" />}
+                  title="Pizzas"
+                  description={data.pizzas.total}
+                  subDescription={`+${data.pizzas.last_month} this month`}
+                />
+              </Grid>
+              <Grid item xs={4}>
+                <DashboardCard
+                  icon={<LunchDining fontSize="small" />}
+                  title="Burgers"
+                  description={data.burgers.total}
+                  subDescription={`+${data.burgers.last_month} this month`}
+                />
+              </Grid>
+              <Grid item xs={12}>
+                <DataTable data={data.all_foods} />
+              </Grid>
             </Grid>
           </Box>
         </Container>
