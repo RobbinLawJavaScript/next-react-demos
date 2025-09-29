@@ -17,3 +17,15 @@ npx prisma migrate dev --name init
 ```
 
 - running this command will also generate the prisma client automatically.
+
+- Run the following command to create the prisma client.
+
+```javascript
+npx prisma generate
+```
+
+- Then you must populate the database with the following command.
+
+```javascript
+npm node ./seedDatabase.mjs
+```
