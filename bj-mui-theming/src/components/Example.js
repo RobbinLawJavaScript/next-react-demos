@@ -5,7 +5,7 @@ import { Box, ThemeProvider, createTheme } from '@mui/system';
 const theme = createTheme({
   palette: {
     background: {
-      paper: '#fedbd0',
+      paper: '#442c2e',
     },
     text: {
       primary: 'cyan',
