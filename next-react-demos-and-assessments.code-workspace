@@ -4,16 +4,10 @@
 			"path": "."
 		},
 		{
-			"path": "../next-react"
-		},
-		{
 			"path": "../master-course"
 		},
 		{
 			"path": "../../2025-Robbin-Law"
-		},
-		{
-			"path": "../../../CPSC1520/repos/javascript-demos"
 		}
 	],
 	"settings": {
