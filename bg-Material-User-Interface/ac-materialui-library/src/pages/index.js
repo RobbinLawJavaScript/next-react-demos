@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import { Inter } from '@next/font/google'
 import styles from '@/styles/Home.module.css'
 
 // Our material ui imports.
@@ -15,8 +14,6 @@ import LunchDining from '@mui/icons-material/LunchDining';
 import { data } from "@/foods";
 import DashboardCard from "@/components/DashboardCard";
 import DataTable from '@/components/DataTable';
-
-const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
