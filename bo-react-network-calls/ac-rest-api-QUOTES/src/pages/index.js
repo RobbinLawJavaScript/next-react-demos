@@ -14,9 +14,9 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 
 export default function Home() {
-  const BASE_URL_WITH_END_POINT = 'https://api.quotable.io/random'
-  //const BASE_URL_WITH_END_POINT = 'https://bad-server.io'
-  //const BASE_URL_WITH_END_POINT = 'https://api.quotable.io/bad-endpoint'
+  const BASE_URL_WITH_END_POINT = 'http://api.quotable.io/random'
+  //const BASE_URL_WITH_END_POINT = 'http://bad-server.io'
+  //const BASE_URL_WITH_END_POINT = 'http://api.quotable.io/bad-endpoint'
 
   const [quoteData, setQuoteData] = useState({
     quote: "Quote here.",
