@@ -20,12 +20,10 @@ const existingItems = [
   }
 ]
 
-
 export default function Home() {
   const [items, setItems] = useState(existingItems);
   return (
-    <main
-    >
+    <main>
       <Container>
         <ItemForm setItems={setItems}/>
         <NewItemList items={items} />
