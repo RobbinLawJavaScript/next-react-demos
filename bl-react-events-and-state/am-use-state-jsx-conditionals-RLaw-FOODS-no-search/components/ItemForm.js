@@ -60,6 +60,7 @@ export default function ItemForm({ setItems }) {
     if (itemTitle.trim().length <= 3) {
       throw new Error(`Title must be at least 3 characters`)
     }
+    console.log("itemType = ", itemType)
     if (![
       "Fruit",
       "Vegetable",
