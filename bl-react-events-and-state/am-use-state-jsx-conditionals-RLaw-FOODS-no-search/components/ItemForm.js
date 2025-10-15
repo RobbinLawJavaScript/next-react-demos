@@ -57,19 +57,22 @@ export default function ItemForm({ setItems }) {
 
   const validateForm = () => {
     setError("")
+    let errorMessage = ''
     if (itemTitle.trim().length <= 3) {
-      throw new Error(`Title must be at least 3 characters`)
+      errorMessage += "- Title must be at least 3 characters\n"
     }
-    console.log("itemType = ", itemType)
     if (![
       "Fruit",
       "Vegetable",
       "Meat"
     ].includes(itemType)) {
-      throw new Error(`Type is required`)
+      errorMessage += "- Type is required\n"
     }
     if (datePosted.isBefore(dayjs(Date.now()), 'day')) {
-      throw new Error(`Date Posted must be in the future`)
+      errorMessage += "- Date Posted must be in the future\n"
+    }
+    if (errorMessage != ''){
+      throw new Error(errorMessage)
     }
   }
 
@@ -90,8 +93,31 @@ export default function ItemForm({ setItems }) {
             fullWidth
             sx={{width: '80%'}}
             value={itemTitle}
-            onChange={(event) => setItemTitle(event.target.value)}
+            onChange={(event) => {
+              setItemTitle(event.target.value)
+              console.log('itemTitle = ', event.target.value)
+            }}
           />
+        </Grid>
+        <Grid item xs={12}>
+          <FormControl fullWidth>
+            <InputLabel id="item-type-select">Type</InputLabel>
+            <Select
+                labelId="item-type-select"
+                label="Type"
+                sx={{width: '80%'}}
+                value={itemType}
+                onChange={(event) => {
+                  setItemType(event.target.value)
+                  console.log("itemType = ", event.target.value)
+                }}
+            >
+              <MenuItem value={""}>Please Select A Type below</MenuItem>
+              <MenuItem value={"Fruit"}>Fruit</MenuItem>
+              <MenuItem value={"Vegetable"}>Vegetable</MenuItem>
+              <MenuItem value={"Meat"}>Meat</MenuItem>
+            </Select>
+          </FormControl>
         </Grid>
         <Grid item xs={12}>
           <LocalizationProvider dateAdapter={AdapterDayjs}>
@@ -105,33 +131,17 @@ export default function ItemForm({ setItems }) {
               defaultValue={dayjs(Date.now())}
               sx={{width: '80%'}}
               value={datePosted}
-              onChange={(newValue) => setDatePosted(newValue)}
-              
+              onChange={(newValue) => {
+                setDatePosted(newValue)
+                console.log('datePosted = ', newValue)
+              }} 
             />
           </LocalizationProvider>
-        </Grid>
-        <Grid item xs={12}>
-          <FormControl fullWidth>
-            <InputLabel id="item-type-select">Type</InputLabel>
-            <Select
-                labelId="item-type-select"
-                label="Type"
-                sx={{width: '80%'}}
-                value={itemType}
-                onChange={(event) => setItemType(event.target.value)}
-            >
-              <MenuItem value={""}>Please Select A Type below</MenuItem>
-              <MenuItem value={"Fruit"}>Fruit</MenuItem>
-              <MenuItem value={"Vegetable"}>Vegetable</MenuItem>
-              <MenuItem value={"Meat"}>Meat</MenuItem>
-            </Select>
-          </FormControl>
         </Grid>
         <Grid item xs={12}>
           <Button variant="contained" type="submit">Submit new Item</Button>
         </Grid>
         <Grid item xs={12}>
-          {console.log('error is: ', error)}
           {error && <Alert severity="error">
             <AlertTitle>Validation Error</AlertTitle>
             <div style={{whiteSpace: 'pre-line'}}>{error}</div>
