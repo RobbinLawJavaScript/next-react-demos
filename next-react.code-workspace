@@ -1,0 +1,25 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../master-course"
+		},
+		{
+			"path": "../../2025-Robbin-Law"
+		},
+		{
+			"path": "../SDEV2150"
+		},
+		{
+			"path": "../../Students-Work"
+		}
+	],
+	"settings": {
+		"files.autoSave": "afterDelay",
+		"editor.tabSize": 2,
+		"editor.wordWrap": "on",
+		"liveServer.settings.multiRootWorkspaceName": "2025-Robbin-Law"
+	}
+}
