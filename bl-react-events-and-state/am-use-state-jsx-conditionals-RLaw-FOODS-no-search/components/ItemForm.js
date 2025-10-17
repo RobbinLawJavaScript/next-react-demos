@@ -59,7 +59,7 @@ export default function ItemForm({ setItems }) {
     setError("")
     let errorMessage = ''
     if (itemTitle.trim().length <= 3) {
-      errorMessage += "- Title must be at least 3 characters\n"
+      errorMessage += "- Title must be at more than 3 characters\n"
     }
     if (![
       "Fruit",
