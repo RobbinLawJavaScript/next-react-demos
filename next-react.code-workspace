@@ -10,10 +10,14 @@
 			"path": "../../2025-Robbin-Law"
 		},
 		{
-			"path": "../SDEV2150"
+			"path": "../../Students-Work"
 		},
 		{
-			"path": "../../Students-Work"
+			"path": "../SDEV2150-OLD"
+		},
+		{
+			"name": "SDEV2150",
+			"path": "../../../a-SDEV/SDEV2150-React/SDEV2150"
 		}
 	],
 	"settings": {
