@@ -18,7 +18,7 @@ import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
 
 
-export default function ItemForm({ setItems }) {
+export default function ItemForm({ items, setItems }) {
   const [itemTitle, setItemTitle] = useState('')
   const [datePosted, setDatePosted] = useState(dayjs(Date.now()))
   const [itemType, setItemType] = useState('')
@@ -28,21 +28,15 @@ export default function ItemForm({ setItems }) {
     try {
       event.preventDefault()
       validateForm()
-      setItems((prevItems) => {
-        console.log('prevItems')
-        console.log(prevItems)
-        let addToPrevItems = [
+      let addToPrevItems = [
           {
             title: itemTitle,
             date_posted: datePosted.format('YYYY-MM-DD'),
             item_type: itemType,
           },
-          ...prevItems
+          ...items
         ]
-        console.log('newly built Items')
-        console.log(addToPrevItems)
-        return addToPrevItems
-      })
+      setItems(addToPrevItems);
       resetForm()
     } catch (error) {
       setError(error.message)

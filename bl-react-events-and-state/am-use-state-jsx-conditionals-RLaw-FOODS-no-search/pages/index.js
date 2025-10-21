@@ -25,7 +25,7 @@ export default function Home() {
   return (
     <main>
       <Container>
-        <ItemForm setItems={setItems}/>
+        <ItemForm items={items} setItems={setItems}/>
         <NewItemList items={items} />
       </Container>
     </main>
