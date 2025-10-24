@@ -48,7 +48,6 @@ export default function Home() {
     console.log(`index Home; getDog(); begin`)
     setLoading(true)
     const data = await getData()
-    // uncomment the following line to see the data returned from the API (in the tests)
     // console.log(data)
     setDogImage(data.message)
     setDogName(faker.name.firstName())
