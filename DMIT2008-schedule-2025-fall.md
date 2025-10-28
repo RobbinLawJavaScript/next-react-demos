@@ -15,13 +15,13 @@
 | Assessment | Submit via | Due 11:59 PM | Mark %|
 |---|---|---|---|
 | Assignment 1 | github | week 4 Sunday Sept28 | 20 |
-| Review Quiz | Brightspace | week 5  Friday Oct03| 15 |
-| Assignment 2 | github | week 6  Sunday Oct12| 20 |
-| Assignment 3 | github | week 8  Sunday Oct26| 10 |
-| Assignment 4a| github | week 10  | 10 |
-| Assignment 4b| github | week 13  | 10 |
-| Assignment 5 | github | week 15  | 10 |
-| Theory | Brightspace | week 15  | 5 |
+| Review Quiz | Brightspace | week 5  Friday Oct03| 20 |
+| Assignment 2 | github | week 6  Sunday Oct12| 7.5 |
+| Assignment 3 | github | week 8  Sunday Oct26| 15 |
+| Assignment 4a| github | week 11 Sunday Nov16| 10 |
+| Assignment 4b| github | week 13 Sunday Nov20 | 10 |
+| Assignment 5 | github | week 15 Sunday Dec14 | 10 |
+| Theory | Brightspace | week 15 Sunday Dec14| 7.5 |
 |Total|||100|
 
 ---
