@@ -26,7 +26,7 @@ export default function Home() {
 
   useEffect(()=> {
     console.log(`useEffect: Home Mounted`)
-    changeQuote()
+    //changeQuote()
   }, [])
 
   useEffect(()=> {
