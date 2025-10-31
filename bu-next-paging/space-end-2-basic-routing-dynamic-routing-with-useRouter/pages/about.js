@@ -8,7 +8,6 @@ import Box from '@mui/material/Box';
 import NavBar from '@components/NavBar';
 
 export default function Home() {
-  console.log(`about Home; mounting...`)
 
   useEffect(()=> {
     console.log(`about Home; useEffect on mount;`)

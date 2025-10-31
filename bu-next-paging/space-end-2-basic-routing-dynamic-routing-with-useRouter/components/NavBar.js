@@ -1,5 +1,6 @@
 import {useState, useEffect} from 'react'
 
+import Box from '@mui/material/Box';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography'
@@ -7,7 +8,6 @@ import Typography from '@mui/material/Typography'
 import Link from 'next/link'
 
 export default function NavBar(props) {
-  console.log(`NavBar; mounting...`)
 
   useEffect(()=> {
     console.log(`NavBar; useEffect on mount`)
@@ -17,19 +17,26 @@ export default function NavBar(props) {
   }, [])
 
   return (
-  <AppBar position="static">
-    <Toolbar>
-      <Link href="/">
-        <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-          Space Agency App
+  <Box sx={{ flexGrow: 1, marginBottom: 2}}>
+    <AppBar position="static">
+      <Toolbar>
+        <Typography variant="h6" component="div"  sx={{ flexGrow: 1 }}>
+          <Link href="/">
+            Space-Agency-App
+          </Link>
         </Typography>
-      </Link>
-      <Link href="/about/">
-        <Typography variant="h6" component="div" >
-          About
+        <Typography variant="h6" component="div" sx={{paddingRight: 4}}>
+          <Link href="/about">
+            About
+          </Link>
         </Typography>
-      </Link>
-    </Toolbar>
-  </AppBar>
+        <Typography variant="h6" component="div" sx={{paddingRight: 4}}>
+          <Link href="/robbin">
+            Robbin-Route
+          </Link>
+        </Typography>
+      </Toolbar>
+    </AppBar>
+  </Box>
   )
 }

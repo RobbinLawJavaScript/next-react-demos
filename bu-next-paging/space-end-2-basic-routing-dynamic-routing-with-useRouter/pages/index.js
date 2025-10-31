@@ -12,7 +12,6 @@ import NavBar from '@components/NavBar'
 import { getAgencies } from 'api/agencies'
 
 export default function Home() {
-  console.log(`index Home; mounting...`)
   const [agenciesData, setAgenciesData] = useState()
 
   useEffect(()=> {

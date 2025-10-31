@@ -8,7 +8,6 @@ import Typography from '@mui/material/Typography';
 
 
 export default function SimpleDetailsCard(props) {
-  console.log(`SimpleDetailsCard; mounting...`)
 
   useEffect(()=> {
     console.log(`SimpleDetailsCard; useEffect on mount`)

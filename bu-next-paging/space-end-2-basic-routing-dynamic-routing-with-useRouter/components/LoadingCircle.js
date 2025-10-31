@@ -6,7 +6,6 @@ import CircularProgress from '@mui/material/CircularProgress';
 import Box from '@mui/material/Box';
 
 export default function LoadingCircle() {
-  console.log(`LoadingCircle; mounting...`)
 
   useEffect(()=> {
     console.log(`LoadingCircle; useEffect on mount`)

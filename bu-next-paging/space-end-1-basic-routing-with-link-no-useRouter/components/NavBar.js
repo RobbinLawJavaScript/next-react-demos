@@ -5,7 +5,6 @@ import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography'
 
-
 export default function NavBar(props) {
   return (
   <Box sx={{ flexGrow: 1, marginBottom: 2}}>
@@ -13,15 +12,15 @@ export default function NavBar(props) {
       <Toolbar>
           <Typography variant="h6" component="div"  sx={{ flexGrow: 1 }}>
             <Link href="/">
-              Space Agency App
+              Space-Agency-App
             </Link>
           </Typography>
-          <Typography variant="h6" component="div" sx={{paddingRight: 2}}>
+          <Typography variant="h6" component="div" sx={{paddingRight: 4}}>
             <Link href="/about">
               About
             </Link>
           </Typography>
-          <Typography variant="h6" component="div" sx={{paddingRight: 2}}>
+          <Typography variant="h6" component="div" sx={{paddingRight: 4}}>
             <Link href="/robbin">
               Robbin-Route
             </Link>
