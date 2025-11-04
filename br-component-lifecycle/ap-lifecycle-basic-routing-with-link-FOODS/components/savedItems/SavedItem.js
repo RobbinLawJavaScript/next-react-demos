@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 
 import Box from '@mui/material/Box';
@@ -9,6 +10,12 @@ import { deleteSavedItem } from '@/utils/api/items';
 
 export default function SavedItem({savedItem}) {
   const router = useRouter()
+
+  useEffect(()=> {
+      console.log(`MOUNT - SavedItem components/savedItems/SavedItem.js`);
+      return () => {
+        console.log(`UNMOUNT - SavedItem components/savedItems/SavedItem.js`)}
+    }, []);
 
   const handleDelete = async () => {
     await deleteSavedItem(savedItem.id);

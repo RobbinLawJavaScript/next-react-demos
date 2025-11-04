@@ -17,6 +17,12 @@ export default function Item({item, savedItems, setSavedItems}) {
   const router = useRouter();
 
   useEffect(()=> {
+    console.log(`MOUNT - Item components/items/Item.js`);
+    return () => {
+      console.log(`UNMOUNT - Item components/items/Item.js`)}
+  }, []);
+  
+  useEffect(()=> {
     let savedItemIds = savedItems.map((item) => item.itemId);
     if(savedItemIds.includes(item.id)) {
       setSaved(true);
