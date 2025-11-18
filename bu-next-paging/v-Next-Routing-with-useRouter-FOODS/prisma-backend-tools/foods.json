@@ -1,0 +1,144 @@
+{
+  "all_foods": [
+    {
+      "id": 1,
+      "name": "Orzo",
+      "date_posted": "2024-04-19",
+      "category": "Starch",
+      "rating": "1.1"
+    },
+    {
+      "id": 2,
+      "name": "Fruit",
+      "date_posted": "2024-04-19",
+      "category": "Desert",
+      "rating": "1.1"
+    },
+    {
+      "id": 3,
+      "name": "Beats",
+      "date_posted": "2024-04-19",
+      "category": "Vegetables",
+      "rating": "8.1"
+    },
+    {
+      "id": 4,
+      "name": "Potatoes",
+      "date_posted": "2024-04-19",
+      "category": "Starch",
+      "rating": "7.1"
+    },
+    {
+      "id": 5,
+      "name": "Cheese Cake",
+      "date_posted": "2024-04-19",
+      "category": "Desert",
+      "rating": "5.1"
+    },
+    {
+      "id": 6,
+      "name": "Ice Cream",
+      "date_posted": "2024-04-19",
+      "category": "Desert",
+      "rating": "7.1"
+    },
+    {
+      "id": 7,
+      "name": "Rice",
+      "date_posted": "2024-04-19",
+      "category": "Starch",
+      "rating": "6.1"
+    },
+    {
+      "id": 8,
+      "name": "Pasta",
+      "date_posted": "2024-04-19",
+      "category": "Starch",
+      "rating": "8.1"
+    },
+    {
+      "id": 9,
+      "name": "Carrots",
+      "date_posted": "2024-04-19",
+      "category": "Vegetables",
+      "rating": "5.1"
+    },
+    {
+      "id": 10,
+      "name": "Chocolate Cake",
+      "date_posted": "2024-04-19",
+      "category": "Desert",
+      "rating": "6.1"
+    },
+    {
+      "id": 11,
+      "name": "Tarts",
+      "date_posted": "2024-04-19",
+      "category": "Desert",
+      "rating": "7.1"
+    },
+    {
+      "id": 12,
+      "name": "Beef Tenderloin",
+      "date_posted": "2024-04-19",
+      "category": "Meat",
+      "rating": "9.0"
+    },
+    {
+      "id": 13,
+      "name": "Corn",
+      "date_posted": "2024-04-19",
+      "category": "Vegetables",
+      "rating": "8.1"
+    },
+    {
+      "id": 14,
+      "name": "Pie",
+      "date_posted": "2024-04-19",
+      "category": "Desert",
+      "rating": "9.1"
+    },
+    {
+      "id": 15,
+      "name": "Asparagus",
+      "date_posted": "2024-04-19",
+      "category": "Vegetables",
+      "rating": "9.9"
+    },
+    {
+      "id": 16,
+      "name": "Peas",
+      "date_posted": "2024-04-19",
+      "category": "Vegetables",
+      "rating": "6.1"
+    },
+    {
+      "id": 17,
+      "name": "Prime Rib",
+      "date_posted": "2024-04-19",
+      "category": "Meat",
+      "rating": "9.4"
+    },
+    {
+      "id": 18,
+      "name": "Acorn Squash",
+      "date_posted": "2024-04-19",
+      "category": "Vegetables",
+      "rating": "7.1"
+    },
+    {
+      "id": 19,
+      "name": "Pork Tenderloin",
+      "date_posted": "2024-04-19",
+      "category": "Meat",
+      "rating": "6.1"
+    },
+    {
+      "id": 20,
+      "name": "Butternut Squash",
+      "date_posted": "2024-04-19",
+      "category": "Vegetables",
+      "rating": "9.1"
+    }
+  ] 
+}

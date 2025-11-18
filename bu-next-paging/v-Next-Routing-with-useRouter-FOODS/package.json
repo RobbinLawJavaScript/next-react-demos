@@ -1,0 +1,41 @@
+{
+  "name": "useRouter-static-dynamic-routes-with-prisma",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "test": "jest",
+    "navigate-db": "npx prisma studio --schema ./prisma-backend-tools/schema.prisma",
+    "generate-db": "npx prisma generate --schema ./prisma-backend-tools/schema.prisma",
+    "populate-db": "node ./prisma-backend-tools/seedDatabase.mjs"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
+    "@fontsource/roboto": "^5.0.13",
+    "@mui/icons-material": "^5.15.18",
+    "@mui/material": "^5.15.18",
+    "@prisma/client": "^5.14.0",
+    "isomorphic-fetch": "^3.0.0",
+    "next": "14.2.3",
+    "react": "^18",
+    "react-dom": "^18"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6.4.5",
+    "@testing-library/react": "^15.0.7",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.3",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "jest-fixed-jsdom": "^0.0.2",
+    "msw": "^2.3.0",
+    "postcss": "^8",
+    "prisma": "^5.14.0",
+    "tailwindcss": "^3.4.1",
+    "undici": "^6.18.1"
+  }
+}
