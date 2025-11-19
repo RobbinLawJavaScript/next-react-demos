@@ -1,0 +1,24 @@
+[
+    {
+        "id": "1",
+        "user":{
+           "name": "product hunt"
+        },
+        "tweet": "product hunt is awesome",
+        "video_url": "https://twittercdn.com/video/1234567890",
+        "comments": 50,
+        "retweets": 100,
+        "likes": 200        
+    },
+    {
+        "id": "2",
+        "user":{
+           "name": "product hunt"
+        },
+        "tweet": "product hunt is awesome",
+        "video_url": "https://twittercdn.com/video/1234567890",
+        "comments": 50,
+        "retweets": 100,
+        "likes": 200        
+    }
+]
