@@ -19,7 +19,7 @@
 | Assignment 2 | github | week 6  Sunday Oct12| 7.5 |
 | Assignment 3 | github | week 8  Sunday Oct26| 15 |
 | Assignment 4a| github | week 11 Sunday Nov16| 10 |
-| Assignment 4b| github | week 13 Sunday Nov20 | 10 |
+| Assignment 4b| github | week 13 Sunday Nov30 | 10 |
 | Assignment 5 | github | week 15 Sunday Dec14 | 10 |
 | Theory | Brightspace | week 15 Sunday Dec14| 7.5 |
 |Total|||100|
