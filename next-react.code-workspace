@@ -18,6 +18,14 @@
 		{
 			"name": "SDEV2150",
 			"path": "../../../a-SDEV/SDEV2150-React/SDEV2150"
+		},
+		{
+			"name": "2023-next-react-assessments-solutions",
+			"path": "../2023-next-react-assessments-solutions"
+		},
+		{
+			"name": "2026-next-react-assessments-solutions",
+			"path": "../../../a-SDEV/2026-next-react-assessments-solutions"
 		}
 	],
 	"settings": {
