@@ -1,5 +1,10 @@
 # Testing with Jest
 
+- [test](https://jestjs.io/docs/api#testname-fn-timeout)
+- [render](https://jestjs.io/docs/expect)
+- [screen](https://jestjs.io/docs/expect)
+- [expect](https://jestjs.io/docs/expect)
+
 - [next.org/docs testing](https://nextjs.org/docs/testing#jest-and-react-testing-library).
 - [testing-library.com/docs](https://testing-library.com/docs/).
 - [mswjs.io/docs](https://mswjs.io/docs/getting-started).
