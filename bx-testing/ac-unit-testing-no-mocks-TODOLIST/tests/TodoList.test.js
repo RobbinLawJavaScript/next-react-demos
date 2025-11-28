@@ -10,6 +10,8 @@ import TodoList from '../components/TodoList'
 test('todo list title renders correctly', ()=> {
   render(<TodoList />)
   const titleElement = screen.getByText("Our Todo List")
+  console.debug('hey man')
+  //console.debug(titleElement)
   expect(titleElement).toBeInTheDocument()
 })
 // This tests if both the input textbox and button are part 
